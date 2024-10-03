@@ -1,10 +1,8 @@
 "use client";
 
-import React, { useEffect, useRef } from 'react'
-import Moon from "@/components/Moon";
-import { Canvas, useFrame } from '@react-three/fiber';
+import Moon from "@/components/hero/Moon";
+import { Canvas } from '@react-three/fiber';
 import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
-import gsap from "gsap";
 
 function ThreeScene() {
 
@@ -17,7 +15,7 @@ function ThreeScene() {
                 distance={100}
                 position={[0, 10, -6]} />
             <Moon />
-            <OrbitControls enableDamping={true} enablePan={false} enableZoom={false} autoRotate={true} autoRotateSpeed={1} />
+            <OrbitControls enableDamping={true} enablePan={false} enableZoom={false} autoRotate={true} autoRotateSpeed={1} enableRotate={false} />
         </Canvas>
     )
 }
@@ -33,7 +31,7 @@ export default ThreeScene;
 
 // * 3 Ajouter la lumière ponctuelle (blanche, intensité, portée de 100 unités et décalage au-dessus et à droite de la scène). 
 
-// * 4 Si besoin ajouter un OrbitControls, enableDamping permet que le mouvement s'arrete de manière smooth
+// * 4 Ajouter un OrbitControls
 
 
 
