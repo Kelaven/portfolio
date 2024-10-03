@@ -17,7 +17,7 @@ function ThreeScene() {
                 distance={100}
                 position={[0, 10, -6]} />
             <Moon />
-            <OrbitControls enableDamping={true} enablePan={false} enableZoom={false} autoRotate={true} autoRotateSpeed={2} />
+            <OrbitControls enableDamping={true} enablePan={false} enableZoom={false} autoRotate={true} autoRotateSpeed={1} />
         </Canvas>
     )
 }
