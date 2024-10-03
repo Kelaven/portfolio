@@ -1,7 +1,7 @@
 const Header = () => {
     return (
         <header className="w-full p-4 bg-gray-800 text-white text-center">
-            <h1 className="font-space_grotesk">Mon Site</h1>
+            <h1>Mon Site B</h1>
         </header>
     );
 }

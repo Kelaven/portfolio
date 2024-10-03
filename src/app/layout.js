@@ -1,5 +1,19 @@
 import "./globals.css";
-import { space_grotesk_init, roboto_init } from './utils/fonts';
+import { Space_Grotesk, Roboto } from 'next/font/google';
+
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-spaceGrotesk'
+});
+
+const roboto = Roboto({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-roboto'
+});
+
 
 
 export const metadata = {
@@ -10,7 +24,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="fr">
-      <body className={`${space_grotesk_init.variable} ${roboto_init.variable}`}>
+      <body className={`${spaceGrotesk.variable} ${roboto.variable}`}>
         {children}
       </body>
     </html>

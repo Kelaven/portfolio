@@ -8,9 +8,20 @@ h3,
 h4,
 h5 {
   text-wrap: balance;
-  /* font-family: "Space Grotesk", sans-serif; */
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-space_grotesk;
+  text-wrap: balance;
 }
 p,
-body {
-  /* font-family: "Roboto", sans-serif; */
+body,
+div,
+span {
+  @apply font-roboto;
 }
