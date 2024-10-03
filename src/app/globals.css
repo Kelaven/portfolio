@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .min-nav-height {
+    @apply min-h-[calc(100svh-88px)];
+  }
+}
+
 h1,
 h2,
 h3,

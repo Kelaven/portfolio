@@ -1,7 +1,12 @@
+import Button from "../common/Button";
+
 const Header = () => {
     return (
-        <header className="w-full p-4 bg-gray-800 text-white text-center">
-            <h1>Mon Site B</h1>
+        <header className="absolute w-full px-4 py-10 bg-black text-white lg:flex lg:justify-center">
+            <div className="lg:w-11/12 flex justify-between">
+                <Button>Kévin Lavenant</Button>
+                <Button>Menu</Button>
+            </div>
         </header>
     );
 }

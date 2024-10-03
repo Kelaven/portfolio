@@ -23,42 +23,42 @@ function Moon() {
         });
 
         // Timeline pour passer progressivement par plusieurs couleurs 
-        const tl = gsap.timeline({ repeat: -1, yoyo: true, ease: "power1.inOut", delay: 2 });
+        const tl = gsap.timeline({ repeat: -1, yoyo: true, ease: "power1.inOut", delay: 2.5 });
         tl.to(materialRef.current.color, {         // Blanc vers blanc cassé
             r: 245 / 255, // Couleur #F5F5DC
             g: 245 / 255,
             b: 220 / 255,
-            duration: 1.5
+            duration: 2.5
         });
         tl.to(materialRef.current.color, {         // Blanc cassé vers jaune pâle
             r: 255 / 255, // Couleur #FFFFE0
             g: 255 / 255,
             b: 224 / 255,
-            duration: 1.5
+            duration: 2.5
         });
         tl.to(materialRef.current.color, {         // Jaune pâle vers jaune clair
             r: 255 / 255, // Couleur #FFFACD
             g: 250 / 255,
             b: 205 / 255,
-            duration: 1.5
+            duration: 2.5
         });
         tl.to(materialRef.current.color, {         // Jaune clair vers doré clair
             r: 255 / 255, // Couleur #FFD700
             g: 215 / 255,
             b: 0 / 255,
-            duration: 1.5
+            duration: 2.5
         });
         tl.to(materialRef.current.color, {         // Doré clair vers doré moyen
             r: 218 / 255, // Couleur #DAA520
             g: 165 / 255,
             b: 32 / 255,
-            duration: 1.5
+            duration: 2.5
         });
         tl.to(materialRef.current.color, {         // Doré moyen vers doré foncé
             r: 184 / 255, // Couleur #B8860B
             g: 134 / 255,
             b: 11 / 255,
-            duration: 1.5
+            duration: 2.5
         });
 
     }, []);
@@ -66,7 +66,7 @@ function Moon() {
 
 
     return (
-        <Sphere args={[3, 64, 64]} ref={sphereRef}>
+        <Sphere args={[5, 64, 64]} ref={sphereRef}>
             <meshStandardMaterial color="#ffffff" ref={materialRef} />
         </Sphere>
     )

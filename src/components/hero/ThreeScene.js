@@ -10,12 +10,19 @@ function ThreeScene() {
     return (
         <Canvas dpr={[1, 2]}>
             <PerspectiveCamera makeDefault fov={45} position={[0, 0, 20]} up={[0, 0, -1]} />
-            <pointLight color={0xffffff}
+            <pointLight
+                color={0xffffff}
                 intensity={70}
                 distance={100}
-                position={[0, 10, -6]} />
+                position={[0, 10, -4]} />
             <Moon />
-            <OrbitControls enableDamping={true} enablePan={false} enableZoom={false} autoRotate={true} autoRotateSpeed={1} enableRotate={false} />
+            <OrbitControls
+                enableDamping={true}
+                enablePan={false}
+                enableZoom={false}
+                autoRotate={true}
+                autoRotateSpeed={4}
+                enableRotate={false} />
         </Canvas>
     )
 }
