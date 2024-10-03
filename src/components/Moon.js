@@ -1,14 +1,20 @@
 'use client';
 
-import React from 'react'
 import { Sphere } from '@react-three/drei';
 
 function Moon() {
+
+
     return (
-        <Sphere args={[1, 32, 32]}>
-            {/* Matériau standard pour la sphère (tu peux ajuster la couleur et la texture) */}
+        <Sphere args={[3, 64, 64]}>
+            <meshStandardMaterial color="#00ff83" />
         </Sphere>
     )
 }
 
 export default Moon;
+
+
+// * 1 Création de la sphère : 2 pour la taille, 64 pour la width et height afin d'avoir une balle parfaite
+
+// * 2 Travail de la sphère qui est brute : avec <meshStandardMaterial>
