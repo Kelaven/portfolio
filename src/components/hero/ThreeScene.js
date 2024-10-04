@@ -21,7 +21,7 @@ function ThreeScene() {
                 enablePan={false}
                 enableZoom={false}
                 autoRotate={true}
-                autoRotateSpeed={4}
+                autoRotateSpeed={1.5}
                 enableRotate={false} />
         </Canvas>
     )

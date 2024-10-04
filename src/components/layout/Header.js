@@ -1,11 +1,19 @@
 import Button from "../common/Button";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
+
+
     return (
-        <header className="absolute w-full px-4 py-10 bg-black text-white lg:flex lg:justify-center">
+        <header className="absolute z-10 left-0 w-full px-4 py-10 bg-black text-white lg:flex lg:justify-center">
             <div className="lg:w-11/12 flex justify-between">
                 <Button>Kévin Lavenant</Button>
-                <Button>Menu</Button>
+                <Button>
+                    <span className="flex">
+                        Menu <FontAwesomeIcon icon={faBars} className="ml-4 w-4" />
+                    </span>
+                </Button>
             </div>
         </header>
     );
