@@ -10,7 +10,7 @@ const Header = () => {
             <div className="lg:w-11/12 flex justify-between">
                 <Button>Kévin Lavenant</Button>
                 <Button>
-                    <span className="flex">
+                    <span className="flex font-space_grotesk">
                         Menu <FontAwesomeIcon icon={faBars} className="ml-4 w-4" />
                     </span>
                 </Button>

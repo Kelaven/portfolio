@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        space_grotesk: ['var(--font-spaceGrotesk)', 'sans-serif'], // Cohérence avec le reste du code
+        space_grotesk: ['var(--font-spaceGrotesk)', 'sans-serif'],
         roboto: ['var(--font-roboto)', 'sans-serif'],
       },
     },
