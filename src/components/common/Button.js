@@ -75,10 +75,8 @@ function Button({ children, headerMenuBtn }) {
             document.body.style.overflowY = "auto";
         }
 
-        //     //   return () => {
-        //     //     second
-        //     //   }
     }, [openMenu]) // Le useEffect se déclenche lorsque openMenu change
+
 
 
     return (
@@ -92,7 +90,8 @@ function Button({ children, headerMenuBtn }) {
                 ) :
                     (children)}
             </button>
-            {openMenu && <ModalHeader />}
+            {/* {openMenu && <ModalHeader />} */}
+            <ModalHeader openMenu={openMenu} />
         </>
     )
 }
