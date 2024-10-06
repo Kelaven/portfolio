@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
+import ModalHeader from "../layout/header/ModalHeader";
 gsap.registerPlugin(TextPlugin);
 
 
@@ -48,50 +49,51 @@ function Button({ children, headerMenuBtn }) {
     }, [])
 
     // ! Apparition de la modale
-    // console.log(openMenu);
-    // console.log(button);
     const handleClick = () => {
         if (headerMenuBtn) {
             setOpenMenu(!openMenu);
         }
     }
     useEffect(() => {
-        const modal = document.createElement("div");
+        //     const modal = document.createElement("div");
         if (openMenu) {
-            console.log(children);
-            modal.style.width = "100%";
-            modal.style.height = "100vh";
-            modal.style.backgroundColor = "red";
-            modal.style.position = "fixed";
-            modal.style.top = 0;
-            modal.style.left = 0;
-            modal.className = "modal"; // pour l'identifier
-            document.body.appendChild(modal);
-            document.body.style.overflow = "hidden";
+            //         console.log(children);
+            //         modal.style.width = "100%";
+            //         modal.style.height = "100vh";
+            //         modal.style.backgroundColor = "gray";
+            //         modal.style.position = "fixed";
+            //         modal.style.top = 0;
+            //         modal.style.left = 0;
+            //         modal.className = "modal"; // pour l'identifier
+            //         document.body.appendChild(modal);
+            document.body.style.overflowY = "hidden";
         } else {
-            const existingModal = document.querySelector('.modal');
-            if (existingModal) {
-                document.body.removeChild(existingModal);
-            }
-            document.body.style.overflow = "auto";
+            //         const existingModal = document.querySelector('.modal');
+            //         if (existingModal) {
+            //             document.body.removeChild(existingModal);
+            //         }
+            document.body.style.overflowY = "auto";
         }
 
-        //   return () => {
-        //     second
-        //   }
+        //     //   return () => {
+        //     //     second
+        //     //   }
     }, [openMenu]) // Le useEffect se déclenche lorsque openMenu change
 
 
     return (
-        <button ref={headerBtnsRef} onClick={handleClick} className="font-space_grotesk px-4 py-2 border border-white rounded-sm text-white bg-black font-bold hover:bg-white hover:text-black transition-colors ease-in-out duration-300 opacity-0">
-            {headerMenuBtn ? (
-                <span className="flex items-center">
-                    {children}
-                    {isMounted && <FontAwesomeIcon icon={openMenu ? faXmark : faBars} className="ml-4 w-4" />}
-                </span>
-            ) :
-                (children)}
-        </button>
+        <>
+            <button ref={headerBtnsRef} onClick={handleClick} className="font-space_grotesk px-4 py-2 border border-white rounded-sm text-white bg-black font-bold hover:bg-white hover:text-black transition-colors ease-in-out duration-300 opacity-0">
+                {headerMenuBtn ? (
+                    <span className="flex items-center font-space_grotesk">
+                        {children}
+                        {isMounted && <FontAwesomeIcon icon={openMenu ? faXmark : faBars} className="ml-4 w-4" />}
+                    </span>
+                ) :
+                    (children)}
+            </button>
+            {openMenu && <ModalHeader />}
+        </>
     )
 }
 
