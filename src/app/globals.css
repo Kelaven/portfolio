@@ -31,3 +31,84 @@ div,
 span {
   @apply font-roboto;
 }
+
+/* ! CardHeader.js */
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+/* .back::before {
+  position: absolute;
+  content: " ";
+  display: block;
+  width: 160px;
+  height: 160%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #ff9966,
+    #ff9966,
+    #ff9966,
+    #ff9966,
+    transparent
+  );
+  animation: rotation_481 15000ms infinite linear;
+} */
+.neonWhite::before {
+  position: absolute;
+  content: " ";
+  display: block;
+  width: 160px;
+  height: 160%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    #ffffff,
+    transparent
+  );
+  animation: rotation_481 16000ms infinite linear;
+}
+.neonYellow::before {
+  position: absolute;
+  content: " ";
+  display: block;
+  width: 160px;
+  height: 160%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #ffe967,
+    #ffe967,
+    #ffe967,
+    #ffe967,
+    transparent
+  );
+  animation: rotation_481 18000ms infinite linear;
+}
+.neonGold::before {
+  position: absolute;
+  content: " ";
+  display: block;
+  width: 160px;
+  height: 160%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #b8860b,
+    #b8860b,
+    #b8860b,
+    #b8860b,
+    transparent
+  );
+  animation: rotation_481 20000ms infinite linear;
+}
+@keyframes rotation_481 {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
