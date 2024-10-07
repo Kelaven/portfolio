@@ -68,7 +68,7 @@ span {
     #ffffff,
     transparent
   );
-  animation: rotation_481 16000ms infinite linear;
+  animation: rotation_481 20000ms infinite linear;
 }
 .neonYellow::before {
   position: absolute;
@@ -85,7 +85,7 @@ span {
     #ffe967,
     transparent
   );
-  animation: rotation_481 18000ms infinite linear;
+  animation: rotation_481 20000ms infinite linear;
 }
 .neonGold::before {
   position: absolute;
