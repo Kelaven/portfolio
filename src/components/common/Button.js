@@ -81,7 +81,7 @@ function Button({ children, headerMenuBtn }) {
 
     return (
         <>
-            <button ref={headerBtnsRef} onClick={handleClick} className="font-space_grotesk px-4 py-2 border border-white rounded-sm text-white bg-black font-bold hover:bg-white hover:text-black transition-colors ease-in-out duration-300 opacity-0">
+            <button ref={headerBtnsRef} onClick={handleClick} className="font-space_grotesk px-4 py-2 border border-white rounded-sm text-white bg-black font-bold hover:bg-white hover:text-black transition-colors ease-in-out duration-300 opacity-0 z-50">
                 {headerMenuBtn ? (
                     <span className="flex items-center font-space_grotesk">
                         {children}

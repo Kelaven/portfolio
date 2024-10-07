@@ -1,13 +1,35 @@
 'use client';
 
 import { Sphere } from '@react-three/drei';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import gsap from "gsap";
 
 
 function Moon() {
     const sphereRef = useRef(null) // accès à la sphère
     const materialRef = useRef(null) // accès à la couleur
+    const [sphereSize, setSphereSize] = useState(5); // Taille initiale de la sphère
+
+    // Adapter la taille de la sphère à l'écran 
+    useEffect(() => {
+        const handleResize = () => {
+            if (window.innerWidth < 768) { // Mobile
+                setSphereSize(3.5); // Réduire la taille de la sphère
+            } else {
+                setSphereSize(5); // Taille normale pour desktop
+            }
+        };
+
+        // Appelle la fonction une première fois
+        handleResize();
+
+        // Event listener pour ajuster la taille lors du resize
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     useEffect(() => {
         // Animation d'apparition de la sphère
@@ -75,7 +97,7 @@ function Moon() {
 
 
     return (
-        <Sphere args={[5, 64, 64]} ref={sphereRef}>
+        <Sphere args={[sphereSize, 64, 64]} ref={sphereRef}>
             <meshStandardMaterial color="#ffffff" ref={materialRef} transparent={true} />
         </Sphere>
     )
