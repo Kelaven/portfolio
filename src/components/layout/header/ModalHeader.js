@@ -51,7 +51,7 @@ function ModalHeader({ openMenu }) {
     }, [openMenu, isMobileLandscape]);
 
     return (
-        <div ref={modal} className="modal absolute z-20 top-0 left-0 w-full h-svh mobile-landscape:min-h-[900px] mobile-landscape:overflow-auto bg-black opacity-0 flex whitespace-nowrap overflow-x-auto items-center justify-start lg:justify-between pointer-events-none">
+        <div ref={modal} className="modal absolute z-10 top-0 left-0 w-full h-svh mobile-landscape:min-h-[900px] mobile-landscape:overflow-auto bg-black opacity-0 flex whitespace-nowrap overflow-x-auto items-center justify-start lg:justify-between pointer-events-none">
             <CardHeader neonColor="white" imgSrc='/assets/images/about-illustration-70.webp'> À propos </ CardHeader>
             <CardHeader neonColor="yellow" imgSrc='/assets/images/projects-illustration-70.webp'> Mes projets </CardHeader>
             <CardHeader neonColor="darkgold" imgSrc='/assets/images/contact-illustration-70-darkgold-v2.webp' isTheLast={true}> Contactez-moi </CardHeader>
