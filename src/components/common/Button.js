@@ -54,28 +54,27 @@ function Button({ children, headerMenuBtn }) {
             setOpenMenu(!openMenu);
         }
     }
-    useEffect(() => {
-        //     const modal = document.createElement("div");
-        if (openMenu) {
-            //         console.log(children);
-            //         modal.style.width = "100%";
-            //         modal.style.height = "100vh";
-            //         modal.style.backgroundColor = "gray";
-            //         modal.style.position = "fixed";
-            //         modal.style.top = 0;
-            //         modal.style.left = 0;
-            //         modal.className = "modal"; // pour l'identifier
-            //         document.body.appendChild(modal);
-            document.body.style.overflowY = "hidden";
-        } else {
-            //         const existingModal = document.querySelector('.modal');
-            //         if (existingModal) {
-            //             document.body.removeChild(existingModal);
-            //         }
-            document.body.style.overflowY = "auto";
-        }
-
-    }, [openMenu]) // Le useEffect se déclenche lorsque openMenu change
+    // useEffect(() => {
+    //     const modal = document.createElement("div");
+    // if (openMenu) {
+    //         console.log(children);
+    //         modal.style.width = "100%";
+    //         modal.style.height = "100vh";
+    //         modal.style.backgroundColor = "gray";
+    //         modal.style.position = "fixed";
+    //         modal.style.top = 0;
+    //         modal.style.left = 0;
+    //         modal.className = "modal"; // pour l'identifier
+    //         document.body.appendChild(modal);
+    // document.body.style.overflowY = "hidden";
+    // } else {
+    //         const existingModal = document.querySelector('.modal');
+    //         if (existingModal) {
+    //             document.body.removeChild(existingModal);
+    //         }
+    // document.body.style.overflowY = "auto";
+    // }
+    // }, [openMenu]) // Le useEffect se déclenche lorsque openMenu change
 
 
 

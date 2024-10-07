@@ -7,9 +7,9 @@ function CardHeader({ endCard }) {
     return (
         <>
             {
-                endCard ? (<div className='bg-black min-w-64 md:w-2/4 lg:w-1/5 h-1/2 ms-6 me-6' >
+                endCard ? (<div className='bg-black min-w-64 md:w-2/4 lg:w-1/4 h-1/2 2xl:h-3/4 ms-6 me-6 lg:mx-auto' >
                     Carte
-                </div>) : (<div className='bg-black min-w-64 md:w-2/4 lg:w-1/5 h-1/2 ms-6'>
+                </div>) : (<div className='bg-black min-w-64 md:w-2/4 lg:w-1/4 h-1/2 2xl:h-3/4 ms-6 lg:mx-auto'>
                     Carte
                 </div>)
             }
@@ -18,7 +18,3 @@ function CardHeader({ endCard }) {
 }
 
 export default CardHeader
-
-// 235 * 455
-// 325 * 628
-// 412 * 798
