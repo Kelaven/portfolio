@@ -4,7 +4,6 @@ import React, { useEffect, useRef } from 'react'
 import Image from 'next/image';
 
 function CardHeader({ neonColor, imgSrc }) {
-    console.log(imgSrc);
 
     const backColor = useRef(null);
 
