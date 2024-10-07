@@ -11,6 +11,9 @@ module.exports = {
         space_grotesk: ['var(--font-spaceGrotesk)', 'sans-serif'],
         roboto: ['var(--font-roboto)', 'sans-serif'],
       },
+      screens: {
+        'mobile-landscape': { 'raw': '(max-width: 950px) and (orientation: landscape)' },
+      },
     },
   },
   plugins: [],

@@ -4,7 +4,7 @@ import { Space_Grotesk, Roboto } from 'next/font/google';
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ['latin'],
-  weight: ['400', '700'],
+  weight: ['300', '400', '700'],
   variable: '--font-spaceGrotesk'
 });
 

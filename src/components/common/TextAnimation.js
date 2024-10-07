@@ -21,7 +21,7 @@ function TextAnimation({ children }) {
 
 
     return (
-        <span ref={textRef} style={{ display: 'inline-block' }}>{children}</span> // inline-block permet de s’assurer que l’élément peut être déplacé comme un bloc tout en conservant son comportement de texte.
+        <span ref={textRef} style={{ display: 'inline-block', opacity: 0 }}>{children}</span> // inline-block permet de s’assurer que l’élément peut être déplacé comme un bloc tout en conservant son comportement de texte.
     )
 }
 
