@@ -6,7 +6,7 @@ import CardHeader from './CardHeader';
 
 function ModalHeader({ openMenu }) {
     const modal = useRef(null);
-    const [isMobileLandscape, setIsMobileLandscape] = useState(false); // par principe, au lancement on est pas en mobile paysafe
+    const [isMobileLandscape, setIsMobileLandscape] = useState(false); // par principe, au lancement on est pas en mobile paysage
 
     // Rétablir le scroll en mobile paysage :
     const updateLandscapeMode = () => {
