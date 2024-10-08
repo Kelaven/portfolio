@@ -14,6 +14,9 @@ module.exports = {
       screens: {
         'mobile-landscape': { 'raw': '(max-width: 950px) and (orientation: landscape)' },
         // 'screen-32': '2560px',
+        'mobile-small': '320px',    // Petits mobiles (iPhone SE, anciens modèles)
+        'mobile-medium': '375px',   // Mobiles moyens (iPhone 8, iPhone X)
+        'mobile-large': '425px',    // Mobiles larges (iPhone 12 Pro Max, grands Android)
       },
       animation: {
         'fade-in-up': 'fade-in-up 1s cubic-bezier(0.17, 0.67, 0.83, 0.67) 1s forwards',
