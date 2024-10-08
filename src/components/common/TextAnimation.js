@@ -3,20 +3,31 @@
 import React, { useEffect, useRef } from 'react'
 import gsap from 'gsap';
 
-function TextAnimation({ children }) {
+function TextAnimation({ children, Yanimation }) {
     const textRef = useRef(null);
 
     useEffect(() => {
-        gsap.fromTo(textRef.current, {
-            y: 70,
-            opacity: 0,
-        }, {
-            y: 0,
-            opacity: 1,
-            delay: 1,
-            ease: "power1.out",
-            overwrite: true
-        })
+        if (Yanimation) {
+            gsap.fromTo(textRef.current, {
+                y: 70,
+                opacity: 0,
+            }, {
+                y: 0,
+                opacity: 1,
+                delay: 1,
+                ease: "power1.out",
+                overwrite: true
+            })
+        } else {
+            gsap.fromTo(textRef.current, {
+                opacity: 0,
+            }, {
+                opacity: 1,
+                delay: 1,
+                ease: "power1.out",
+                overwrite: true
+            })
+        }
     }, [])
 
 

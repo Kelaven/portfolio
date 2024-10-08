@@ -15,6 +15,9 @@ module.exports = {
         'mobile-landscape': { 'raw': '(max-width: 950px) and (orientation: landscape)' },
         // 'screen-32': '2560px',
       },
+      animation: {
+        'fade-in-up': 'fade-in-up 1s cubic-bezier(0.17, 0.67, 0.83, 0.67) 1s forwards',
+      },
     },
   },
   plugins: [],

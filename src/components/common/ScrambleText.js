@@ -1,100 +1,98 @@
-// !**********! Tuto pour remplacer le plugin payant de GSAP !**********! //
+// !**********! TUTO POUR REMPLACER L'EFFET SCRAMBLE DU PLUGIN GSAP !**********! //
 
 
-'use client';
+'use client'; // Indique que ce composant est destiné à être exécuté côté client dans Next.js (utile pour les interactions).
 
 import React, { useRef, useState, useEffect } from 'react';
 
 /**
- * Le composant ScrambleText va recevoir du texte (via children) et appliquer un effet de "scramble"
- * lorsque l'utilisateur passe la souris dessus. Il utilise useRef pour manipuler le DOM directement,
- * useState pour stocker l'identifiant de l'intervalle d'animation, et useEffect pour gérer les événements.
+ * Le composant ScrambleText applique un effet de "scramble" sur le texte lorsqu'il est survolé par la souris.
+ * Il permet également d'appliquer des classes CSS venant du parent grâce à la prop `className`.
  */
-function ScrambleText({ children }) {
-    // On crée une référence vers l'élément texte qu'on va manipuler dans le DOM
-    const textRef = useRef(null);
+function ScrambleText({ children, className }) {
+    const [displayText, setDisplayText] = useState(children); // Gère l'état du texte affiché (modifié ou original).
+    const [intervalID, setIntervalID] = useState(null); // Stocke l'ID de l'intervalle en cours (pour le nettoyage).
+    const textRef = useRef(null); // Crée une référence pour accéder à l'élément DOM directement.
 
-    // Le texte original est stocké dans "children" (ce qu'on passe au composant)
-    const originalText = children;
-
-    // On divise le texte en lettres individuelles pour pouvoir les manipuler
-    const letters = originalText.split(''); // Par exemple, "Hello" devient ["H", "e", "l", "l", "o"]
-
-    // useState pour stocker l'identifiant de l'intervalle (pour l'arrêter plus tard)
-    const [intervalID, setIntervalID] = useState(null);
-
-    // Fonction qui génère un caractère aléatoire à partir d'une liste prédéfinie (alphabet et chiffres)
-    function getRandomCharacter() {
+    // Fonction pour obtenir un caractère aléatoire à partir d'une liste prédéfinie (alphabet et chiffres).
+    const getRandomCharacter = () => {
         const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
         return characters[Math.floor(Math.random() * characters.length)];
-    }
-
-    /**
-     * Fonction d'animation qui est déclenchée lorsque la souris entre dans la zone de l'élément (mouseenter).
-     * Elle brouille le texte en changeant les lettres de manière aléatoire puis retourne au texte original.
-     */
-    const handleMouseEnter = () => {
-        let counter = 0;  // Un compteur pour suivre les étapes de l'animation
-        const shuffleCount = 2;  // Le nombre de cycles de scrambling avant de revenir au texte normal
-        const shuffleInterval = 60;  // Temps en millisecondes entre chaque étape de scrambling
-
-        // Crée un intervalle qui va exécuter le scrambling à répétition
-        const intervalID = setInterval(() => {
-            // On parcourt chaque lettre du texte pour la remplacer par un caractère aléatoire
-            const shuffledText = letters.map((char, index) => {
-                // Si c'est une lettre (a-z ou A-Z), on la remplace temporairement par une lettre aléatoire
-                if (char.match(/[a-zA-Z]/)) {
-                    const randomCharacter = getRandomCharacter();
-                    const cyclesToRevert = index - Math.floor(counter / shuffleCount);
-
-                    // Une fois que le nombre de cycles est atteint, on remet la lettre originale
-                    if (counter >= cyclesToRevert * shuffleCount) {
-                        return originalText[index];  // On retourne la lettre d'origine
-                    }
-                    return randomCharacter;  // On retourne un caractère aléatoire
-                }
-                return char;  // Si ce n'est pas une lettre, on garde le caractère inchangé (comme un espace)
-            }).join('');  // On reforme le texte après le scrambling
-
-            // On met à jour le contenu du texte dans l'élément HTML (span)
-            textRef.current.textContent = shuffledText;
-            counter++;  // Incrémenter le compteur à chaque étape
-
-            // Si l'animation est terminée (tout le texte est revenu à l'original), on arrête l'intervalle
-            if (counter >= (shuffleCount + 1) * letters.length) {
-                clearInterval(intervalID);  // On arrête l'intervalle
-                textRef.current.textContent = originalText;  // On remet le texte original
-            }
-        }, shuffleInterval);  // L'animation se répète toutes les 60ms
-
-        // On stocke l'ID de l'intervalle dans l'état pour pouvoir l'arrêter plus tard
-        setIntervalID(intervalID);
     };
 
     /**
-     * useEffect est utilisé ici pour gérer l'ajout des événements "mouseenter" et "mouseleave" lorsque
-     * le composant est monté, et pour nettoyer ces événements quand le composant est démonté.
+     * Cette fonction est responsable de l'effet de scrambling (brouillage) du texte.
+     * @param {string} originalText - Le texte d'origine qui doit être brouillé.
+     */
+    const scrambleText = (originalText) => {
+        const letters = originalText.split(''); // Divise le texte en lettres individuelles.
+        let counter = 0; // Un compteur qui suit la progression du scrambling.
+        const shuffleCount = 2; // Nombre de cycles de brouillage avant de revenir au texte original.
+        const shuffleInterval = 60; // Intervalle en millisecondes entre chaque modification de lettre.
+
+        // Crée un intervalle qui brouille le texte toutes les `shuffleInterval` millisecondes.
+        let newIntervalID = setInterval(() => {
+            // Parcourt chaque lettre du texte pour la remplacer temporairement par un caractère aléatoire.
+            const scrambled = letters.map((char, index) => {
+                if (char.match(/[a-zA-Z]/)) { // Ne brouille que les lettres (ignorer les espaces ou autres caractères).
+                    const randomCharacter = getRandomCharacter(); // Récupère un caractère aléatoire.
+                    const cyclesToRevert = index - Math.floor(counter / shuffleCount);
+
+                    // Si le nombre de cycles est atteint, on remet la lettre originale.
+                    if (counter >= cyclesToRevert * shuffleCount) {
+                        return char;  // Retourne la lettre originale à la bonne position.
+                    }
+                    return randomCharacter;  // Retourne un caractère aléatoire temporaire.
+                }
+                return char; // Garde les caractères non modifiables (comme les espaces) inchangés.
+            }).join(''); // Recompose le texte avec les lettres modifiées.
+
+            setDisplayText(scrambled); // Met à jour le texte affiché.
+            counter++; // Incrémente le compteur à chaque cycle.
+
+            // Si l'animation est terminée (tout le texte est revenu à l'original), on arrête l'intervalle.
+            if (counter >= (shuffleCount + 1) * letters.length) {
+                clearInterval(newIntervalID); // Arrête l'intervalle une fois que l'animation est complète.
+                setDisplayText(originalText); // Restaure le texte original.
+            }
+        }, shuffleInterval); // Répète l'opération toutes les 60 ms.
+
+        // Stocke l'ID de l'intervalle pour pouvoir l'arrêter plus tard si nécessaire.
+        setIntervalID(newIntervalID);
+    };
+
+    /**
+     * Cette fonction est déclenchée lorsqu'on survole le texte avec la souris (mouseenter).
+     * Elle lance l'effet de scrambling et annule tout ancien intervalle en cours.
+     */
+    const handleMouseEnter = () => {
+        if (intervalID) {
+            clearInterval(intervalID); // Nettoie tout ancien intervalle avant d'en commencer un nouveau.
+        }
+        scrambleText(children); // Démarre l'effet de scrambling sur le texte.
+    };
+
+    /**
+     * useEffect est utilisé pour nettoyer l'intervalle en cas de démontage du composant (ou si un nouveau intervalle est défini).
+     * Cela garantit que les animations s'arrêtent correctement lorsque le composant est retiré de la page.
      */
     useEffect(() => {
-        const element = textRef.current;  // Référence à l'élément DOM où le texte est affiché
-
-        // Ajoute les événements "mouseenter" et "mouseleave"
-        element.addEventListener('mouseenter', handleMouseEnter);
-        element.addEventListener('mouseleave', () => {
-            clearInterval(intervalID);  // Arrête l'intervalle d'animation si la souris quitte l'élément
-            textRef.current.textContent = originalText;  // Remet immédiatement le texte original
-        });
-
-        // Nettoyage (on retire les événements lorsqu'on ne veut plus utiliser le composant)
         return () => {
-            element.removeEventListener('mouseenter', handleMouseEnter);  // Retire l'événement d'entrée
-            element.removeEventListener('mouseleave', () => clearInterval(intervalID));  // Retire l'événement de sortie
+            if (intervalID) {
+                clearInterval(intervalID); // Nettoie l'intervalle si le composant est démonté.
+            }
         };
-    }, [letters, intervalID, originalText]);  // Dépendances : ces variables sont utilisées dans l'effet
+    }, [intervalID]); // Exécute cet effet chaque fois que `intervalID` change.
 
-    // Retourne l'élément <span> qui contient le texte avec la référence associée
     return (
-        <span ref={textRef} style={{ display: 'inline-block' }}>{children}</span>
+        // Le texte est rendu dans un `span`, auquel on applique la classe CSS et l'événement mouseenter.
+        <span
+            ref={textRef} // Le `ref` permet d'accéder à cet élément DOM via `textRef.current` si nécessaire.
+            className={className} // Permet de propager les classes CSS fournies par le parent.
+            onMouseEnter={handleMouseEnter} // Lance l'effet de scrambling au survol de la souris.
+        >
+            {displayText} {/* Affiche le texte modifié (brouillé ou original selon l'état) */}
+        </span>
     );
 }
 
