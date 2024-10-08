@@ -13,6 +13,7 @@ module.exports = {
       },
       screens: {
         'mobile-landscape': { 'raw': '(max-width: 950px) and (orientation: landscape)' },
+        // 'screen-32': '2560px',
       },
     },
   },

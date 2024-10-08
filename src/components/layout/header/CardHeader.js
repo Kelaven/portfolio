@@ -35,11 +35,11 @@ function CardHeader({ neonColor, imgSrc, isTheLast, children }) {
 
     return (
         <>
-            {isTheLast ? (<div className='min-w-64 md:w-2/4 lg:w-1/4 h-1/2 2xl:h-3/4 ms-6 me-6 lg:mx-auto rounded-sm cursor-pointer'>
+            {isTheLast ? (<div className='min-w-64 md:w-2/4 lg:w-[20%] h-1/2 ms-6 me-6 lg:mx-auto rounded-sm cursor-pointer'>
                 <div className='w-full h-full preserve-3d rounded-sm'>
                     <div ref={backColor} className='back bg-[#151515] absolute w-full h-full backface-hidden rounded-sm overflow-hidden flex justify-center items-center'>
                         <div className='absolute w-[99%] h-[99%] bg-[#141213] rounded-sm text-white flex flex-col justify-center items-center gap-[30px]'>
-                            <h3 className='absolute z-10 top-8 text-2xl'>
+                            <h3 className='absolute z-10 top-4 text-2xl'>
                                 {children}
                             </h3>
                             <Image src={imgSrc} alt="Illustration de la catégorie"
@@ -50,11 +50,11 @@ function CardHeader({ neonColor, imgSrc, isTheLast, children }) {
                         </div>
                     </div>
                 </div>
-            </div>) : (<div className='min-w-64 md:w-2/4 lg:w-1/4 h-1/2 2xl:h-3/4 ms-6 lg:mx-auto rounded-sm cursor-pointer'>
+            </div>) : (<div className='min-w-64 md:w-2/4 lg:w-[20%] h-1/2 ms-6 lg:mx-auto rounded-sm cursor-pointer'>
                 <div className='w-full h-full preserve-3d rounded-sm'>
                     <div ref={backColor} className='back bg-[#151515] absolute w-full h-full backface-hidden rounded-sm overflow-hidden flex justify-center items-center'>
                         <div className='absolute w-[99%] h-[99%] bg-[#141213] rounded-sm text-white flex flex-col justify-center items-center gap-[30px]'>
-                            <h3 className='absolute z-10 top-8 text-2xl'>
+                            <h3 className='absolute z-10 top-4 text-2xl'>
                                 {children}
                             </h3>
                             <Image src={imgSrc} alt="Illustration de la catégorie"
