@@ -1,12 +1,14 @@
 import TextAnimation from "@/components/common/TextAnimation";
 import ThreeScene from "@/components/hero/ThreeScene";
 import Layout from "@/components/layout/Layout";
-// import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import ScrambleText from "@/components/common/ScrambleText";
 
 export default function Home() {
   return (
     <Layout>
-      <div className="relative w-full h-screen flex items-center justify-center bg-black">
+      <div className="relative w-full h-screen flex items-center justify-center flex-col bg-black">
         <div className="absolute z-10 text-white text-center font-thin px-4 md:px-10 lg:px-40 xl:px-96 text-2xl">
           <h1>
             <TextAnimation>
@@ -32,6 +34,14 @@ export default function Home() {
           </div>
         </div>
         <ThreeScene />
+        <div className="absolute bottom-10 text-white flex flex-col justify-center">
+          <p>
+            <ScrambleText>
+              Découvrez-en plus
+            </ScrambleText>
+          </p>
+          <FontAwesomeIcon icon={faCaretDown} className="text-xl" />
+        </div>
       </div>
     </Layout >
   );
