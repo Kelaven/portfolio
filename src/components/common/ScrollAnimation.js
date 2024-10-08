@@ -28,7 +28,7 @@ function ScrollAnimation({ children }) {
                     ease: "power1.out",
                     scrollTrigger: {
                         trigger: heroIconRef.current,
-                        start: "65vh bottom",
+                        start: "58vh bottom",
                         end: "100%", // L'animation se termine après avoir défilé 100% de la hauteur de l'écran
                         scrub: 1,
                     },
