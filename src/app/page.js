@@ -57,7 +57,7 @@ export default function Home() {
         </div>
         {/* <div className='min-h-4 mobile-medium:min-h-9 mobile-large:min-h-12 sm:min-h-20 md:h-48 lg:h-52 xl:h-96 bg-black'></div> */}
         {/* <div className='h-80 bg-black'></div> */}
-        <div className="h-36 mobile-large:h-48 sm:h-64 md:h-72 lg:h-96 xl:h-128 bg-black"></div>
+        <div className="h-32 mobile-large:h-44 sm:h-64 md:h-72 lg:h-96 xl:h-128 bg-black"></div>
       </section>
       <section>
         <AboutSection />
