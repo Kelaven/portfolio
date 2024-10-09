@@ -3,26 +3,26 @@
 import { Decal, Float, Icosahedron, useTexture } from '@react-three/drei'
 import React, { useEffect, useRef, useState } from 'react'
 
-function Meteor({ img, color }) {
+function Meteor({ img, color, colormap, normalmap, roughnessmap }) {
     const [decal, colorMap, normalMap, roughnessMap] = useTexture([
         img,
-        '/assets/textures/Rock009_4K-png_Color.png',
-        '/assets/textures/Rock009_4K-png_NormalGL.png',
-        '/assets/textures/Rock009_4K-png_Roughness.png',
+        colormap,
+        normalmap,
+        roughnessmap,
     ]);
 
     const meteorRef = useRef(null);
-    const [meteorSize, setMeteorSize] = useState(4.5);
-    const [logoSize, setLogoSize] = useState(4.5)
+    const [meteorSize, setMeteorSize] = useState(3.5);
+    const [logoSize, setLogoSize] = useState(4)
 
     useEffect(() => {
         const handleResize = () => {
             if (window.innerWidth < 768) { // Mobile
                 setMeteorSize(3.5);
-                setLogoSize(4.5);
+                setLogoSize(4);
             } else {
-                setMeteorSize(4.5);
-                setLogoSize(4.5);
+                setMeteorSize(3.5);
+                setLogoSize(4);
             }
         };
 
@@ -40,7 +40,8 @@ function Meteor({ img, color }) {
 
     return (
         <Float speed={1} rotationIntensity={1} floatIntensity={2}>
-            <Icosahedron args={[meteorSize, 2]} castShadow ref={meteorRef}>
+            {/* <Sphere args={[meteorSize, 64, 64]} castShadow ref={meteorRef}></Sphere> */}
+            <Icosahedron args={[meteorSize, 4]} castShadow ref={meteorRef}>
                 <meshStandardMaterial
                     color={color}
                     // color="#b8860b"
