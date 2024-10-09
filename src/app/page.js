@@ -2,7 +2,7 @@ import TextAnimation from "@/components/common/TextAnimation";
 import ThreeScene from "@/components/hero/ThreeScene";
 import Layout from "@/components/layout/Layout";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCaretDown, faCircle } from "@fortawesome/free-solid-svg-icons";
+import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import ScrambleText from "@/components/common/ScrambleText";
 import AboutSection from "@/components/sections/AboutSection";
 import ProjectsSection from "@/components/sections/ProjectsSection";
