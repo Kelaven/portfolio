@@ -4,12 +4,11 @@ import { Canvas } from '@react-three/fiber'
 import Meteor from './Meteor';
 
 function MeteorCanva({ ...props }) {
-    console.log(props);
-    console.log(props.img);
+
     return (
         <Canvas style={{ height: '160%', width: '100px' }} dpr={[1, 2]}>
             <PerspectiveCamera makeDefault fov={45} position={[0, 0, 20]} />
-            <ambientLight intensity={0.6} />
+            <ambientLight intensity={0.8} />
             <directionalLight
                 position={[2, 2, 5]}
                 intensity={2}
