@@ -39,7 +39,7 @@ function Meteor({ img, color, colormap, normalmap, roughnessmap }) {
 
 
     return (
-        <Float speed={1} rotationIntensity={1} floatIntensity={2}>
+        <Float speed={0.8} rotationIntensity={0.8} floatIntensity={2}>
             {/* <Sphere args={[meteorSize, 64, 64]} castShadow ref={meteorRef}></Sphere> */}
             <Icosahedron args={[meteorSize, 4]} castShadow ref={meteorRef}>
                 <meshStandardMaterial
@@ -47,7 +47,7 @@ function Meteor({ img, color, colormap, normalmap, roughnessmap }) {
                     // color="#b8860b"
                     flatShading={true} // Permet de rendre les facettes bien visibles
                     metalness={0.1} // léger effet métallique
-                    roughness={0.7} // brillance, plus c'est proche de 1 moins c'est brillant
+                    roughness={0.3} // brillance
                     map={colorMap}          // Texture de couleur
                     normalMap={normalMap}    // Normal Map pour les détails en relief
                     roughnessMap={roughnessMap}  // Rugosité pour la réflexion
