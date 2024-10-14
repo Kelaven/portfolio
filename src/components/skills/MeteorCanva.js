@@ -3,7 +3,9 @@ import { OrbitControls, PerspectiveCamera } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber'
 import Meteor from './Meteor';
 
-function MeteorCanva() {
+function MeteorCanva({ ...props }) {
+    console.log(props);
+    console.log(props.img);
     return (
         <Canvas style={{ height: '160%', width: '100px' }} dpr={[1, 2]}>
             <PerspectiveCamera makeDefault fov={45} position={[0, 0, 20]} />
@@ -30,7 +32,7 @@ function MeteorCanva() {
                 position={[0, -10, 0]}
             />
 
-            <Meteor img="/assets/logos/javascript.svg" color='#f7df1e' colormap='/assets/textures/Rock01_4K-PNG_Color.png' normalmap='/assets/textures/Rock01_4K-PNG_NormalGL.png' roughnessmap='/assets/textures/Rock01_4K-PNG_Roughness.png' />
+            <Meteor img={props.img} color={props.color} colormap={props.colormap} normalmap={props.normalmap} roughnessmap={props.roughnessmap} />
             <OrbitControls enableRotate={true} enableZoom={false} />
         </Canvas>
     )
