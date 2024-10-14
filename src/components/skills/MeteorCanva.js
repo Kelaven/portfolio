@@ -15,7 +15,7 @@ function MeteorCanva({ ...props }) {
                 castShadow
             />
             <pointLight
-                position={[0, 0, 10]}
+                position={[0, 0, 8]}
                 intensity={30}
                 distance={50}
             />

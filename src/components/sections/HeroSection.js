@@ -24,7 +24,7 @@ function HeroSection() {
                     <div className="text-sm pt-10">
                         <p>
                             <TextAnimation Yanimation={true}>
-                                Actuellement :  <span className="font-bold">Ouvert aux opportunités</span>
+                                Actuellement :  <span className="font-bold">À l'écoute d'opportunités</span>
                             </TextAnimation>
                         </p>
                         <p className="text-pretty">

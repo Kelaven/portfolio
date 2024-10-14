@@ -44,10 +44,9 @@ function Meteor({ img, color, colormap, normalmap, roughnessmap }) {
             <Icosahedron args={[meteorSize, 4]} castShadow ref={meteorRef}>
                 <meshStandardMaterial
                     color={color}
-                    // color="#b8860b"
                     flatShading={true} // Permet de rendre les facettes bien visibles
                     metalness={0.1} // léger effet métallique
-                    roughness={0.3} // brillance
+                    roughness={0.5} // brillance
                     map={colorMap}          // Texture de couleur
                     normalMap={normalMap}    // Normal Map pour les détails en relief
                     roughnessMap={roughnessMap}  // Rugosité pour la réflexion

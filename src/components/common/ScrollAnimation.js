@@ -7,6 +7,8 @@ function ScrollAnimation({ children }) {
 
 
     useEffect(() => {
+        let scrollTriggerInstance; // Stocker l'instance ScrollTrigger pour la nettoyer plus tard
+
         // Dynamically import GSAP and ScrollTrigger only on the client-side
         const loadGsap = async () => {
             if (typeof window !== 'undefined') {
@@ -23,7 +25,6 @@ function ScrollAnimation({ children }) {
 
                 // Configuration de l'animation
                 gsap.to(heroIconRef.current, {
-                    transformOrigin: "center 70%",
                     scale: 400,
                     ease: "power1.out",
                     scrollTrigger: {
@@ -38,7 +39,14 @@ function ScrollAnimation({ children }) {
         };
 
         loadGsap(); // Appel de la fonction pour charger GSAP
+
+        return () => { // clean up
+            if (scrollTriggerInstance) {
+                scrollTriggerInstance.scrollTrigger.kill(); // Arrêter et nettoyer ScrollTrigger
+            }
+        };
     }, []);
+
 
     return (
         <section ref={heroIconRef}>
