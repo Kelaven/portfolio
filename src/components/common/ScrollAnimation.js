@@ -19,6 +19,7 @@ function ScrollAnimation({ children }) {
 
                 // Initialisation de l'icône avec une petite échelle
                 gsap.set(heroIconRef.current, {
+
                     scale: 0.5,  // Taille initiale réduite
                     transformOrigin: "center 70%",
                 });

@@ -48,9 +48,9 @@ export default function Home() {
                 </ScrambleText>
               </p>
               <span className="flex justify-center">
+                {/* <FontAwesomeIcon icon={faCaretDown} className="text-xl cursor-pointer" /> */}
                 <ScrollAnimation>
-                  {/* <FontAwesomeIcon icon={faCaretDown} className="text-xl cursor-pointer" /> */}
-                  <FontAwesomeIcon icon={faCircle} className="text-xl cursor-pointer" />
+                  <FontAwesomeIcon icon={faCircle} className="text-xs cursor-pointer pt-2" />
                 </ScrollAnimation>
               </span>
             </TextAnimation>
