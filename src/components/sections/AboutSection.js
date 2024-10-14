@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import React from 'react'
 import SkillsThreeScene from '../skills/SkillsThreeScene';
+import Image from 'next/image';
 
 function AboutSection() {
     return (
@@ -30,8 +31,14 @@ function AboutSection() {
                 <li>Me contacter</li>
             </ul>
             <SkillsThreeScene />
+            <div className='max-w-72 mx-auto h-96 my-16 relative  shadow-profile-picture'>
+                <Image src='/assets/images/photo-profil-CV-numerique.webp' alt="Photo de profil"
+                    fill
+                    className='object-cover'
+                />
+            </div>
         </div>
     )
 }
 
-export default AboutSection
+export default AboutSection;

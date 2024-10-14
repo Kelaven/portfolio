@@ -44,7 +44,8 @@ function CardHeader({ neonColor, imgSrc, isTheLast, children }) {
                             <Image src={imgSrc} alt="Illustration de la catégorie"
                                 fill
                                 sizes="(max-width: 768px) 50vw, (max-width: 1024px) 25vw, 100vw"
-                                style={{ objectFit: 'contain' }}
+                                className='object-contain'
+                            // style={{ objectFit: 'contain' }}
                             />
                         </div>
                     </div>
