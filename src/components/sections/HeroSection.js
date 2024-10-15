@@ -1,16 +1,16 @@
+import React from 'react';
 import TextAnimation from "@/components/common/TextAnimation";
 import ThreeScene from "@/components/hero/ThreeScene";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import ScrambleText from "@/components/common/ScrambleText";
 import ScrollAnimation from "@/components/common/ScrollAnimation";
-import React from 'react'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircle } from "@fortawesome/free-solid-svg-icons";
 
 function HeroSection() {
     return (
         <>
             <div className="relative w-full h-screen flex items-center justify-center flex-col bg-black">
-                <div className="h-screen flex flex-col justify-center absolute z-10 text-white text-center font-thin px-4 md:px-10 lg:px-40 xl:px-96 text-2xl">
+                <div className="absolute z-10 text-white text-center font-thin px-4 md:px-10 lg:px-40 xl:px-96 text-2xl">
                     <h1>
                         <TextAnimation Yanimation={true}>
                             Je suis <strong className="font-bold">développeur web</strong> et <strong className="font-bold">photographe</strong>.
@@ -24,7 +24,7 @@ function HeroSection() {
                     <div className="text-sm pt-10">
                         <p>
                             <TextAnimation Yanimation={true}>
-                                Actuellement :  <span className="font-bold">À l'écoute d'opportunités</span>
+                                Actuellement :  <span className="font-bold">Ouvert aux opportunités</span>
                             </TextAnimation>
                         </p>
                         <p className="text-pretty">
@@ -44,7 +44,7 @@ function HeroSection() {
                         </p>
                         <span className="flex justify-center">
                             <ScrollAnimation>
-                                <FontAwesomeIcon icon={faCircle} className="text-xl cursor-pointer" />
+                                <FontAwesomeIcon icon={faCircle} className="text-xs pt-2" />
                             </ScrollAnimation>
                         </span>
                     </TextAnimation>
