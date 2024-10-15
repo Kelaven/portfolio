@@ -20,7 +20,7 @@ function AboutSection() {
                         Moi c'est Kévin, un <strong>passionné</strong> de nature qui s'est tourné vers le développement web pour donner vie à ses idées et accompagner ses clients dans leurs plus beaux projets.
                     </p>
                     <p className='py-4'>
-                        J'aime sortir des sentiers battu pour proposer du contenu interactif, qui capte l'attention des internautes et met en avant un travail rigoureux.
+                        J'aime sortir des sentiers battus pour proposer du contenu interactif, qui capte l'attention des internautes et met en avant un travail rigoureux.
                     </p>
                     <p className='pb-4'>
                         Diplômé d'une formation <em>Développeur Web et Web Mobile</em> en 2024, je continue de me former chaque jour pour maîtriser <strong>JavaScript</strong>, <strong>React</strong>, <strong>PHP</strong> & <strong>Symfony</strong>. <br />
@@ -32,7 +32,7 @@ function AboutSection() {
                     <p className='pb-4'>
                         Je suis à l'écoute de nouvelles opportunités, n'hésitez pas à me contacter !
                     </p>
-                    <ul className='py-4 flex'>
+                    <ul className='pt-4 pb-6 flex'>
                         <li className='me-8 cursor-pointer'>
                             <ScrambleText className='font-space_grotesk pe-1'>
                                 Télécharger mon CV
