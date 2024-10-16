@@ -12,7 +12,7 @@ function AboutSection() {
         <>
             <div className='px-4 md:px-12 lg:px-24 xl:flex'>
                 <div className='xl:w-1/2 2xl:w-[700px] lg:pe-24'>
-                    <h2 className='text-4xl'>
+                    <h2 className='text-4xl font-bold'>
                         Hello world !
                     </h2>
                     <p className='pt-4 pb-2 text-lg'>
@@ -62,7 +62,7 @@ function AboutSection() {
                     <FontAwesomeIcon icon={faCircle} className="text-xl cursor-pointer" />
                 </ScrollAnimation>
             </div>
-            <div className="h-56 mobile-large:h-64 sm:h-96 bg-black"></div>
+            <div className="h-24 sm:h-32 bg-black"></div>
         </>
     )
 }

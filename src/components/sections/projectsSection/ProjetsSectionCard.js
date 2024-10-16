@@ -14,7 +14,7 @@ function ProjetsSectionCard() {
                 </div>
                 <div className="flex items-center bg-gray-700 text-white rounded-lg px-4 py-1 w-full max-w-xs md:max-w-none ml-6"> {/*  url-bar   */}
                     <FontAwesomeIcon icon={faMagnifyingGlass} className="text-gray-400 mr-2" />
-                    <a href="https://uiverse.io" target="_blank" className="bg-transparent text-white outline-none font-space_grotesk">
+                    <a href="https://uiverse.io" target="_blank" className="bg-transparent text-white outline-none">
                         visiterlesite.fr
                     </a>
                 </div>

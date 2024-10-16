@@ -154,3 +154,20 @@ html.lenis body {
   backdrop-filter: blur(100px);
   filter: blur(80px);
 }
+
+/* ! Contact cards */
+.card:hover .card-border {
+  inset: 15px;
+  opacity: 1;
+}
+.card:hover .card-content .card-description {
+  opacity: 1;
+}
+.card:hover .card-bottom-text {
+  opacity: 1;
+  letter-spacing: 3px;
+}
+.card-content {
+  overflow: hidden;
+  transition: all 1s ease-in-out;
+}
