@@ -16,6 +16,7 @@
     "@react-three/fiber": "^8.17.9",
     "glob": "^9.3.5",
     "gsap": "^3.12.5",
+    "lenis": "^1.1.14",
     "next": "14.2.14",
     "react": "^18",
     "react-dom": "^18",

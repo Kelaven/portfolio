@@ -1,3 +1,4 @@
+import ScrollSmooth from "@/components/common/ScrollSmooth";
 import "./globals.css";
 import { Space_Grotesk, Roboto } from 'next/font/google';
 
@@ -25,7 +26,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="fr">
       <body className={`${spaceGrotesk.variable} ${roboto.variable}`}>
-        {children}
+        <ScrollSmooth>
+          {children}
+        </ScrollSmooth>
       </body>
     </html>
   );
