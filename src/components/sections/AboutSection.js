@@ -6,7 +6,6 @@ import Image from 'next/image';
 import ScrambleText from '../common/ScrambleText';
 import ScrollAnimation from '../common/ScrollAnimation';
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
-import ImageAnimation from '../common/ImageAnimation';
 
 function AboutSection() {
     return (
