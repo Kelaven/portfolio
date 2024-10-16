@@ -6,13 +6,12 @@ import Lenis from 'lenis';
 function ScrollSmooth({ children }) {
     useEffect(() => {
         const lenis = new Lenis({
-            smooth: true,            // Active le smooth scroll
+            smooth: true,
             lerp: 0.07,
             wheelMultiplier: 0.5,
             syncTouch: true          // Active le scroll synchronisé pour les appareils tactiles
         });
 
-        // Gestion du rafraîchissement à chaque frame
         function raf(time) {
             lenis.raf(time);
             requestAnimationFrame(raf);
@@ -33,4 +32,4 @@ function ScrollSmooth({ children }) {
     )
 }
 
-export default ScrollSmooth
+export default ScrollSmooth;

@@ -52,17 +52,18 @@ function AboutSection() {
                     <div className='w-72 h-96 lg:me-20 xl:me-0 xl:h-2/3 xl:w-96 relative'>
                         <Image src='/assets/images/cv-photo-profil-650-100.jpg' alt="Photo de profil"
                             fill
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                             className='object-cover shadow-profile-picture'
                         />
                     </div>
                 </div>
             </div>
-            <div className="bottom-10 text-black flex justify-center pt-28">
+            <div className="bottom-10 text-black flex justify-center pt-14">
                 <ScrollAnimation>
                     <FontAwesomeIcon icon={faCircle} className="text-xl cursor-pointer" />
                 </ScrollAnimation>
             </div>
-            <div className="h-32 mobile-large:h-44 sm:h-64 md:h-72 lg:h-96 xl:h-128 bg-black"></div>
+            <div className="h-56 mobile-large:h-64 sm:h-96 bg-black"></div>
         </>
     )
 }

@@ -50,7 +50,7 @@ function HeroSection() {
                     </TextAnimation>
                 </div>
             </div>
-            <div className="h-32 mobile-large:h-44 sm:h-64 md:h-72 lg:h-96 xl:h-128 bg-black"></div>
+            <div className="h-24 mobile-large:h-44 sm:h-64 md:h-72 lg:h-96 xl:h-128 bg-black"></div>
         </>
     )
 }
