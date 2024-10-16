@@ -14,7 +14,7 @@ function ProjectsSection() {
                     <h2 className='text-white text-4xl pb-10'>ProjectsSection</h2>
 
 
-                    <div className="card bg-gray-900 p-6 rounded-sm w-full mx-auto mt-10">
+                    <div className="card bg-gray-900 p-6 rounded-sm w-full mx-auto my-10">
                         <div className="flex justify-between items-center mb-4">  {/*  header  */}
                             <div className="flex space-x-2"> {/*  traffic-lights   */}
                                 <div className="w-4 h-4 rounded-full bg-red-500"></div>
@@ -28,7 +28,7 @@ function ProjectsSection() {
                                 </a>
                             </div>
                         </div>
-                        <div className='text-white pt-4 flex w-full'> {/*  body  */}
+                        <div className='text-white pt-4 md:flex w-full'> {/*  body  */}
                             <div className='flex-1 pe-4'>
                                 <p>
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet diam ut orci sagittis suscipit. Integer non eros nec purus feugiat interdum a nec turpis. Morbi vulputate eros ex, vitae congue nibh placerat ac. Phasellus id magna nec augue convallis efficitur. Nullam malesuada nisi in sapien commodo, ac vulputate libero facilisis. Nam tristique mauris ut ligula scelerisque, a sodales magna tristique. Etiam semper eros nec sem blandit, id feugiat eros gravida. Fusce non metus non lorem suscipit pellentesque sit amet eget orci.
@@ -42,12 +42,13 @@ function ProjectsSection() {
                                     </span>
                                 </div>
                             </div>
-                            <div className='flex-1 ps-4 flex justify-center'> {/* Conteneur de l'image */}
+                            <div className='flex-1 ps-4 flex justify-center pt-6 md:pt-0'> {/* Conteneur de l'image */}
                                 <Image
                                     src='/assets/images/cv-photo-profil-650-100.jpg'
                                     alt="Photo de profil"
                                     width={233}
                                     height={500}
+                                    className='object-cover'
                                 />
                             </div>
                         </div>
