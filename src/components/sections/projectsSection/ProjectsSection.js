@@ -28,7 +28,7 @@ function ProjectsSection() {
             <div className="h-32 sm:h-52 bg-black">
                 <div className="relative bottom-10 bg-black text-white flex justify-center pt-14 z-10">
                     <ScrollAnimation>
-                        <FontAwesomeIcon icon={faCircle} className="text-xl cursor-pointer" />
+                        <FontAwesomeIcon icon={faCircle} className="text-xl" />
                     </ScrollAnimation>
                 </div>
             </div>

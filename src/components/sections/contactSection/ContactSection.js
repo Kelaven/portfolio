@@ -1,6 +1,9 @@
 import React from 'react';
-import Image from 'next/image';
 import ContactSectionCard from './ContactSectionCard';
+import ScrambleText from '@/components/common/ScrambleText';
+import { faCircle } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import ScrollAnimation from '../../common/ScrollAnimation';
 
 function ContactSection() {
     return (
@@ -9,7 +12,7 @@ function ContactSection() {
                 <h2 className='text-4xl font-bold pb-10'>
                     Contactez-moi
                 </h2>
-                <div className="w-full max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-10">
                     {/* sidebar */}
                     <div className="text-left space-y-6">
                         <div>
@@ -22,13 +25,24 @@ function ContactSection() {
                             <h3 className="uppercase font-bold text-gray-500 tracking-wide">Réseaux</h3>
                             <ul className="font-light list-none space-y-1">
                                 <li>
-                                    <a href="https://www.linkedin.com/in/kevin-lavenant/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                                    <a href="https://www.linkedin.com/in/kevin-lavenant/" target="_blank" rel="noopener noreferrer">
+                                        <ScrambleText>
+                                            LinkedIn
+                                        </ScrambleText></a>
                                 </li>
                                 <li>
-                                    <a href="https://github.com/Kelaven" target="_blank" rel="noopener noreferrer">Github</a>
+                                    <a href="https://github.com/Kelaven" target="_blank" rel="noopener noreferrer">
+                                        <ScrambleText>
+                                            Github
+                                        </ScrambleText>
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href="https://www.instagram.com/klaven_portraits/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                                    <a href="https://www.instagram.com/klaven_portraits/" target="_blank" rel="noopener noreferrer">
+                                        <ScrambleText>
+                                            Instagram
+                                        </ScrambleText>
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -50,6 +64,11 @@ function ContactSection() {
                         <ContactSectionCard />
                     </div>
                 </div>
+            </div>
+            <div className="bottom-10 text-black flex justify-center pt-48">
+                <ScrollAnimation>
+                    <FontAwesomeIcon icon={faCircle} className="text-xl" />
+                </ScrollAnimation>
             </div>
         </>
     );

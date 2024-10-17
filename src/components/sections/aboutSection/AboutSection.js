@@ -1,6 +1,6 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
-import React from 'react'
+import React from 'react';
 import SkillsThreeScene from '../../skills/SkillsThreeScene';
 import Image from 'next/image';
 import ScrambleText from '../../common/ScrambleText';
@@ -59,7 +59,7 @@ function AboutSection() {
             </div>
             <div className="bottom-10 text-black flex justify-center pt-14">
                 <ScrollAnimation>
-                    <FontAwesomeIcon icon={faCircle} className="text-xl cursor-pointer" />
+                    <FontAwesomeIcon icon={faCircle} className="text-xl" />
                 </ScrollAnimation>
             </div>
             <div className="h-24 sm:h-32 bg-black"></div>

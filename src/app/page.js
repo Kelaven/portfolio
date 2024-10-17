@@ -16,7 +16,9 @@ export default function Home() {
       <section className="overflow-hidden">
         <ProjectsSection />
       </section>
-      <ContactSection />
+      <section className="overflow-hidden">
+        <ContactSection />
+      </section>
     </Layout >
   );
 }
