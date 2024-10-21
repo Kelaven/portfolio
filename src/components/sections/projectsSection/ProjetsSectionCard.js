@@ -68,8 +68,8 @@ function ProjetsSectionCard() {
                     </div>
                     <div className='flex-1 flex justify-center pt-6 md:pt-0'> {/* Conteneur de l'image */}
                         <Image
-                            src='/assets/images/cv-photo-profil-650-100.jpg'
-                            alt="Photo de profil"
+                            src={project.picture}
+                            alt="Photo de présentation du projet"
                             width={500}
                             height={500}
                             className='object-cover shadow-sm md:w-[233px]'
