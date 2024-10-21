@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 
-function ProjetsSectionCard() {
+function ProjectsSectionCard() {
 
     const [projects, setProjects] = useState([]);
 
@@ -84,4 +84,4 @@ function ProjetsSectionCard() {
     )
 }
 
-export default ProjetsSectionCard
+export default ProjectsSectionCard

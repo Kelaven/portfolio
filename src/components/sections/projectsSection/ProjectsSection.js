@@ -1,5 +1,5 @@
 import React from 'react';
-import ProjetsSectionCard from './ProjetsSectionCard';
+import ProjectsSectionCard from './ProjectsSectionCard';
 import ScrollAnimation from '../../common/ScrollAnimation';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
@@ -17,7 +17,7 @@ function ProjectsSection() {
                 <div className="blurred-background-reverse absolute bottom-[3%] lg:bottom-[6%] right-[5%] lg:left-[10%] w-[200px] h-[200px] xl:w-[300px] xl:h-[150px] z-0"></div>
                 <div className='relative z-10'>
                     <h2 className='text-white text-4xl pb-10 font-bold'>Projets en ligne</h2>
-                    <ProjetsSectionCard />
+                    <ProjectsSectionCard />
                     <div className='h-24'></div>
                 </div>
             </div>
