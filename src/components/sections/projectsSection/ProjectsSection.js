@@ -18,9 +18,6 @@ function ProjectsSection() {
                 <div className='relative z-10'>
                     <h2 className='text-white text-4xl pb-10 font-bold'>Projets en ligne</h2>
                     <ProjetsSectionCard />
-                    <ProjetsSectionCard />
-                    <ProjetsSectionCard />
-                    <ProjetsSectionCard />
                     <div className='h-24'></div>
                 </div>
             </div>
