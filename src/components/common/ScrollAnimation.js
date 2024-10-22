@@ -50,9 +50,9 @@ function ScrollAnimation({ children }) {
 
 
     return (
-        <section ref={heroIconRef}>
+        <div ref={heroIconRef}>
             {children}
-        </section>
+        </div>
     );
 }
 

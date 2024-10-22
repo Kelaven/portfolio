@@ -28,7 +28,7 @@ function TextAnimation({ children, Yanimation }) {
                 overwrite: true
             })
         }
-    }, [])
+    }, [Yanimation])
 
 
     return (

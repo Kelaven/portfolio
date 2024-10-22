@@ -65,7 +65,17 @@ function ContactSection() {
                     </div>
                 </div>
             </div>
-            <div className="bottom-10 text-black flex justify-center pt-48">
+            {/* <div className="bottom-10 text-black flex justify-center pt-48">
+                <ScrollAnimation>
+                    <FontAwesomeIcon icon={faCircle} className="text-xl" />
+                </ScrollAnimation>
+            </div> */}
+
+
+
+
+            <div className="h-12 sm:h-24 bg-white"></div>
+            <div className="text-black flex justify-center">
                 <ScrollAnimation>
                     <FontAwesomeIcon icon={faCircle} className="text-xl" />
                 </ScrollAnimation>

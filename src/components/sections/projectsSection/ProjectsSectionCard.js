@@ -38,16 +38,21 @@ function ProjectsSectionCard() {
 
 
         projects.map((project, id) => (
-            <div key={id} className="card bg-gray-900 p-6 rounded-sm w-full mx-auto my-10">
+            <div key={id} className="card bg-gray-900 p-6 rounded-sm w-full max-w-5xl mx-auto my-10">
                 <div className="flex justify-between items-center mb-4">  {/*  header  */}
                     <div className="flex space-x-2"> {/*  traffic-lights   */}
                         <div className="w-4 h-4 rounded-full bg-red-500"></div>
                         <div className="w-4 h-4 rounded-full bg-yellow-500"></div>
                         <div className="w-4 h-4 rounded-full bg-green-500"></div>
                     </div>
-                    <div className="flex items-center bg-gray-700 text-white rounded-lg px-4 py-1 w-full max-w-xs md:max-w-none ml-6"> {/*  url-bar   */}
+                    <div className="flex items-center bg-gray-700 text-white rounded-lg px-4 py-1 w-full max-w-xs md:max-w-full ml-6"> {/*  url-bar   */}
                         <FontAwesomeIcon icon={faMagnifyingGlass} className="text-gray-400 mr-2" />
-                        <a href="https://uiverse.io" target="_blank" className="bg-transparent text-white outline-none">
+                        <a
+                            href={project.name}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="projectscards__searchbar bg-transparent text-white outline-none text-sm md:text-base"
+                        >
                             {project.name}
                         </a>
                     </div>
@@ -57,10 +62,9 @@ function ProjectsSectionCard() {
                         <p>
                             {project.description}
                         </p>
-                        <div className="flex flex-wrap space-x-4 pt-4">
-
+                        <div className="flex flex-wrap justify-center space-x-3 pt-4">
                             {project.languages.map((language, id) => (
-                                <span key={id} className="relative py-1 px-3 rounded-full shadow-md text-sm font-medium tracking-wide text-white bg-black border-2 border-yellow-500">
+                                <span key={id} className="relative py-1 px-3 my-1 rounded-full shadow-md text-sm font-medium tracking-wide text-white bg-black border-2 border-yellow-500">
                                     {language}
                                 </span>
                             ))}
@@ -72,7 +76,7 @@ function ProjectsSectionCard() {
                             alt="Photo de présentation du projet"
                             width={500}
                             height={500}
-                            className='object-cover shadow-sm md:w-[233px]'
+                            className='object-cover shadow-sm md:w-[233px] border border-gray-700'
                         />
                     </div>
                 </div>

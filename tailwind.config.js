@@ -32,6 +32,9 @@ module.exports = {
         // 'profile-picture': 'rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;',
         'profile-picture': '6px 5px 8px 0px rgba(62,66,66,0.10);',
       },
+      minHeight: {
+        '200vh': '200vh',
+      },
     },
   },
   plugins: [],

@@ -171,3 +171,10 @@ html.lenis body {
   overflow: hidden;
   transition: all 1s ease-in-out;
 }
+
+/* ! Projects cards */
+@media (max-width: 768px) and (orientation: portrait) {
+  .projectscards__searchbar {
+    word-break: break-word;
+  }
+}

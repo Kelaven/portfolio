@@ -18,18 +18,18 @@ function HeroSection() {
                     </h1>
                     <p>
                         <TextAnimation Yanimation={true}>
-                            J'aime <span className="font-bold">imaginer</span>, <span className="font-bold">créer</span>, et  <span className="font-bold">donner vie à mes idées</span>.
+                            J&apos;aime <span className="font-bold">imaginer</span>, <span className="font-bold">créer</span>, et <span className="font-bold">donner vie à mes idées</span>.
                         </TextAnimation>
                     </p>
                     <div className="text-sm pt-10">
                         <p>
                             <TextAnimation Yanimation={true}>
-                                Actuellement :  <span className="font-bold">Ouvert aux opportunités</span>
+                                Actuellement : <span className="font-bold">Ouvert aux opportunités</span>
                             </TextAnimation>
                         </p>
                         <p className="text-pretty">
                             <TextAnimation Yanimation={true}>
-                                Auparavant : <span className="font-bold">Conseiller commercial, 8 ans d'expérience</span>
+                                Auparavant : <span className="font-bold">Conseiller commercial, 8 ans d&apos;expérience</span>
                             </TextAnimation>
                         </p>
                     </div>
@@ -50,9 +50,10 @@ function HeroSection() {
                     </TextAnimation>
                 </div>
             </div>
-            <div className="h-24 mobile-large:h-44 sm:h-64 md:h-72 lg:h-96 xl:h-128 bg-black"></div>
+            <div className="h-24 mobile-large:h-44 sm:h-64 md:h-72 lg:h-96 bg-black"></div>
+            <div className='pt-32'></div>
         </>
     )
 }
 
-export default HeroSection
+export default HeroSection;

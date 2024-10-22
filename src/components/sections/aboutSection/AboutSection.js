@@ -16,27 +16,28 @@ function AboutSection() {
                         Hello world !
                     </h2>
                     <p className='pt-4 pb-2 text-lg'>
-                        Moi c'est Kévin, un <strong>passionné</strong> de nature qui s'est tourné vers le développement web pour donner vie à ses idées et accompagner ses clients dans leurs plus beaux projets.
+                        Moi c&apos;est Kévin, un <strong>passionné</strong> de nature qui s&apos;est tourné vers le développement web pour donner vie à ses idées et accompagner ses clients dans leurs plus beaux projets.
                     </p>
                     <p className='py-4'>
-                        J'aime sortir des sentiers battus pour proposer du contenu interactif, qui capte l'attention des internautes et met en avant un travail rigoureux.
+                        J&apos;aime sortir des sentiers battus pour proposer du contenu interactif, qui capte l&apos;attention des internautes et met en avant un travail rigoureux.
                     </p>
                     <p className='pb-4'>
-                        Diplômé d'une formation <em>Développeur Web et Web Mobile</em> en 2024, je continue de me former chaque jour pour maîtriser <strong>JavaScript</strong>, <strong>React</strong>, <strong>PHP</strong> & <strong>Symfony</strong>. <br />
-                        Mon objectif est de maîtriser la création de sites et d’applications performants et sécurisés, de bout en bout.
+                        Diplômé d&apos;une formation <em>Développeur Web et Web Mobile</em> en 2024, je continue de me former chaque jour pour maîtriser <strong>JavaScript</strong>, <strong>React</strong>, <strong>PHP</strong> & <strong>Symfony</strong>. <br />
+                        Mon objectif est de maîtriser la création de sites et d&apos;applications performants et sécurisés, de bout en bout.
                     </p>
                     <p className='pb-4'>
-                        Auparavant Conseiller Commercial, je cumule plus de <strong>8 ans d'expérience profesionnelle</strong>. J'ai travaillé dans divers secteurs d'activité, allant de la mesuiserie à la banque, en passant par le marketing et la communication. Cela m'a permis d'acquérir plusieurs <em>softskills</em> qui me distinguent aujourd'hui.
+                        Auparavant Conseiller Commercial, je cumule plus de <strong>8 ans d&apos;expérience professionnelle</strong>. J&apos;ai travaillé dans divers secteurs d&apos;activité, allant de la menuiserie à la banque, en passant par le marketing et la communication. Cela m&apos;a permis d&apos;acquérir plusieurs <em>soft skills</em> qui me distinguent aujourd&apos;hui.
                     </p>
                     <p className='pb-4'>
-                        Je suis à l'écoute de nouvelles opportunités, n'hésitez pas à me contacter !
+                        Je suis à l&apos;écoute de nouvelles opportunités, n&apos;hésitez pas à me contacter !
                     </p>
                     <ul className='pt-4 pb-6 flex'>
                         <li className='me-8 cursor-pointer'>
                             <ScrambleText className='font-space_grotesk pe-1'>
                                 Télécharger mon CV
                             </ScrambleText>
-                            <FontAwesomeIcon icon={faDownload} /> </li>
+                            <FontAwesomeIcon icon={faDownload} />
+                        </li>
                         <li className='cursor-pointer font-space_grotesk'>
                             <ScrambleText className='font-space_grotesk'>
                                 Me contacter
@@ -49,7 +50,9 @@ function AboutSection() {
                 </div>
                 <div className='xl:w-1/2 flex justify-center items-center my-10 md:py-6 xl:my-0'>
                     <div className='w-72 h-96 lg:me-20 xl:me-0 xl:h-2/3 xl:w-96 relative'>
-                        <Image src='/assets/images/cv-photo-profil-650-100.jpg' alt="Photo de profil"
+                        <Image
+                            src='/assets/images/cv-photo-profil-650-100.jpg'
+                            alt="Photo de profil"
                             fill
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                             className='object-cover shadow-profile-picture'
@@ -62,7 +65,7 @@ function AboutSection() {
                     <FontAwesomeIcon icon={faCircle} className="text-xl" />
                 </ScrollAnimation>
             </div>
-            <div className="h-24 sm:h-32 bg-black"></div>
+            <div className="h-24 sm:h-48 bg-black"></div>
         </>
     )
 }

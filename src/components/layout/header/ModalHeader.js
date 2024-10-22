@@ -3,6 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import CardHeader from './CardHeader';
+import Link from "next/link";
 
 function ModalHeader({ openMenu }) {
     const modal = useRef(null);
@@ -55,7 +56,8 @@ function ModalHeader({ openMenu }) {
             <CardHeader neonColor="white" imgSrc='/assets/images/about-illustration-70.webp'> À propos </ CardHeader>
             <CardHeader neonColor="yellow" imgSrc='/assets/images/projects-illustration-70.webp'> Mes projets </CardHeader>
             <CardHeader neonColor="darkgold" imgSrc='/assets/images/contact-illustration-70-darkgold-v2.webp' isTheLast={true}> Contactez-moi </CardHeader>
-            <a href="#" className='absolute bottom-20 right-4 lg:right-14 2xl:right-20 font-space_grotesk font-thin'>Accès admin</a>
+            <Link href="http://127.0.0.1:8000/login" passHref target="_blank" rel="noopener noreferrer" className='absolute bottom-20 right-4 lg:right-14 2xl:right-20 font-space_grotesk font-thin'>
+                Accès admin </Link>
         </div>
     );
 }
