@@ -1,18 +1,17 @@
 import React from 'react';
 import ContactSectionCard from './ContactSectionCard';
 import ScrambleText from '@/components/common/ScrambleText';
-import { faCircle } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import ScrollAnimation from '../../common/ScrollAnimation';
+import ContactCircle from './ContactCircle';
 
 function ContactSection() {
     return (
         <>
-            <div className='px-4 md:px-12 lg:px-24 min-h-screen bg-white text-black flex flex-col justify-center'>
+
+            <div className='min-h-screen px-4 md:px-12 lg:px-24  bg-white text-black flex flex-col justify-center'>
                 <h2 className='text-4xl font-bold pb-10'>
                     Contactez-moi
                 </h2>
-                <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-10">
+                <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-10 pb-20">
                     {/* sidebar */}
                     <div className="text-left space-y-6">
                         <div>
@@ -57,29 +56,16 @@ function ContactSection() {
                         </div>
                     </div>
 
-                    <div className="flex flex-col space-y-6 justify-center items-center">
+                    <div className="flex flex-col space-y-6 justify-center items-center mb-20">
                         <h4 className="text-2xl lg:text-xl font-bold leading-none text-right">
                             Ils me recommandent
                         </h4>
                         <ContactSectionCard />
                     </div>
                 </div>
+                <ContactCircle />
             </div>
-            {/* <div className="bottom-10 text-black flex justify-center pt-48">
-                <ScrollAnimation>
-                    <FontAwesomeIcon icon={faCircle} className="text-xl" />
-                </ScrollAnimation>
-            </div> */}
-
-
-
-
-            <div className="h-12 sm:h-24 bg-white"></div>
-            <div className="text-black flex justify-center">
-                <ScrollAnimation>
-                    <FontAwesomeIcon icon={faCircle} className="text-xl" />
-                </ScrollAnimation>
-            </div>
+            {/* <div className='bg-black h-96 md:h-0'></div> */}
         </>
     );
 }

@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 
-function ProjectsSectionCard() {
+function ProjectsSectionCard({ onLoad }) {
 
     const [projects, setProjects] = useState([]);
 
@@ -22,13 +22,16 @@ function ProjectsSectionCard() {
                         // si on récupère un seul project
                         setProjects([projects]);
                     }
+                    if (onLoad) {
+                        onLoad(); // Appel du callback lorsque les projets sont prêts
+                    }
                 }
             } catch (error) {
                 console.log(error);
             }
         }
         fetchProjects()
-    }, [])
+    }, [onLoad])
 
     console.log(projects);
 

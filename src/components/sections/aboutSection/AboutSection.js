@@ -65,7 +65,7 @@ function AboutSection() {
                     <FontAwesomeIcon icon={faCircle} className="text-xl" />
                 </ScrollAnimation>
             </div>
-            <div className="h-24 sm:h-48 bg-black"></div>
+            <div className="h-20 sm:h-48 bg-black"></div>
         </>
     )
 }

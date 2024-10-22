@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef } from 'react';
 
-function ScrollAnimation({ children }) {
+function MobileScrollAnimation({ children }) {
     const heroIconRef = useRef(null);
 
 
@@ -30,12 +30,12 @@ function ScrollAnimation({ children }) {
                     ease: "power1.out",
                     scrollTrigger: {
                         trigger: heroIconRef.current,
-                        start: "58vh bottom",
+                        start: "top bottom+=250",
                         end: "100%", // L'animation se termine après avoir défilé 100% de la hauteur de l'écran
                         scrub: 1,
                         // markers: true,
-                        // invalidateOnRefresh: true, // Recalcule les positions sur rafraîchissement
-                        // anticipatePin: 1, // Aide à éviter les problèmes de décalage de déclenchement
+                        invalidateOnRefresh: true, // Recalcule les positions sur rafraîchissement
+                        anticipatePin: 1, // Aide à éviter les problèmes de décalage de déclenchement
                     },
                 })
 
@@ -59,5 +59,5 @@ function ScrollAnimation({ children }) {
     );
 }
 
-export default ScrollAnimation;
+export default MobileScrollAnimation;
 
