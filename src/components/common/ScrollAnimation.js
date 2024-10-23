@@ -31,7 +31,8 @@ function ScrollAnimation({ children }) {
                     scrollTrigger: {
                         trigger: heroIconRef.current,
                         start: "58vh bottom",
-                        end: "100%", // L'animation se termine après avoir défilé 100% de la hauteur de l'écran
+                        end: "top top", // Le haut de l’élément arrive en haut de la fenêtre. Donc en scrub l'inverse.
+                        // end: "100%", // L'animation se termine après avoir défilé 100% de la hauteur de l'écran
                         scrub: 1,
                         // markers: true,
                         // invalidateOnRefresh: true, // Recalcule les positions sur rafraîchissement

@@ -7,7 +7,7 @@ function ContactSectionCard() {
         <>
             {CONTACTDATA.map((data, i) => (
                 <div key={i}
-                    className={`relative ${i === 2 ? 'h-[400px] xl:h-[290px]' : 'h-[250px]'} bg-[#243137] grid place-content-center rounded-md overflow-hidden card transition-all duration-500 ease-in-out hover:scale-110 hover:rounded-none`}>
+                    className={`relative ${i === 2 ? 'h-[400px] xl:h-[290px]' : 'h-[250px]'} max-w-xl bg-[#243137] grid place-content-center rounded-md overflow-hidden card transition-all duration-500 ease-in-out hover:scale-110 hover:rounded-none`}>
                     <div className="absolute inset-0 border-2 border-[#bd9f67] opacity-0 transition-all duration-500 ease-in-out card-border"></div>
 
                     <div className="relative text-center card-content transition-all duration-500 ease-in-out">

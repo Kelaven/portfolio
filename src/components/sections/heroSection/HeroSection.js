@@ -51,7 +51,7 @@ function HeroSection() {
                 </div>
             </div>
             <div className="h-24 sm:h-64 md:h-72 lg:h-96 bg-black"></div>
-            <div className='sm:pt-32'></div>
+            <div className='sm:pt-20'></div>
         </>
     )
 }
