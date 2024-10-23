@@ -12,13 +12,13 @@ export default function Home() {
       <section className="overflow-hidden">
         <HeroSection />
       </section>
-      <section className="overflow-hidden">
+      <section id="aboutsection" className="overflow-hidden">
         <AboutSection />
       </section>
-      <section className="overflow-hidden">
+      <section id="projectssection" className="overflow-hidden">
         <ProjectsSection />
       </section>
-      <section className="overflow-hidden">
+      <section id="contactsection" className="overflow-hidden">
         <ContactSection />
       </section>
     </Layout >

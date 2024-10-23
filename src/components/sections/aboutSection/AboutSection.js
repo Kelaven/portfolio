@@ -6,6 +6,7 @@ import Image from 'next/image';
 import ScrambleText from '../../common/ScrambleText';
 import ScrollAnimation from '../../common/ScrollAnimation';
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
+import SmoothScroll from '@/components/common/SmoothScroll';
 
 function AboutSection() {
     return (
@@ -33,15 +34,19 @@ function AboutSection() {
                     </p>
                     <ul className='pt-4 pb-6 flex'>
                         <li className='me-8 cursor-pointer'>
-                            <ScrambleText className='font-space_grotesk pe-1'>
-                                Télécharger mon CV
-                            </ScrambleText>
+                            <a href="/assets/documents/CV_Kevin_LAVENANT-DW.pdf" download>
+                                <ScrambleText className='font-space_grotesk pe-1'>
+                                    Télécharger mon CV
+                                </ScrambleText>
+                            </a>
                             <FontAwesomeIcon icon={faDownload} />
                         </li>
                         <li className='cursor-pointer font-space_grotesk'>
-                            <ScrambleText className='font-space_grotesk'>
-                                Me contacter
-                            </ScrambleText>
+                            <SmoothScroll href="#contactsection">
+                                <ScrambleText className='font-space_grotesk'>
+                                    Me contacter
+                                </ScrambleText>
+                            </SmoothScroll>
                         </li>
                     </ul>
                     <div>

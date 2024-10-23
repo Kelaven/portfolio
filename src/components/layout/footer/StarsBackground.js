@@ -30,7 +30,7 @@ const StarsBackground = () => {
             fpsLimit: 60,
             particles: {
                 number: {
-                    value: 100, // Nombre d'étoiles
+                    value: 250, // Nombre d'étoiles
                     density: {
                         enable: true,
                         value_area: 800,
@@ -47,7 +47,7 @@ const StarsBackground = () => {
                     random: true, // Rendre l'opacité aléatoire
                 },
                 size: {
-                    value: { min: 1, max: 3 }, // Taille des étoiles
+                    value: { min: 0.5, max: 3 }, // Taille des étoiles
                 },
                 move: {
                     enable: true, // Activer le mouvement

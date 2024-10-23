@@ -69,7 +69,7 @@ function Button({ children, headerMenuBtn }) {
                     (children)}
             </button>
             {/* {openMenu && <ModalHeader />} */}
-            <ModalHeader openMenu={openMenu} />
+            <ModalHeader openMenu={openMenu} setOpenMenu={setOpenMenu} />
         </>
     )
 }

@@ -5,6 +5,7 @@ import ScrambleText from "@/components/common/ScrambleText";
 import ScrollAnimation from "@/components/common/ScrollAnimation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
+import SmoothScroll from '@/components/common/SmoothScroll';
 
 function HeroSection() {
     return (
@@ -38,9 +39,11 @@ function HeroSection() {
                 <div className="absolute bottom-10 text-white">
                     <TextAnimation Yanimation={false} >
                         <p>
-                            <ScrambleText className="cursor-pointer font-space_grotesk">
-                                Découvrez-en plus
-                            </ScrambleText>
+                            <SmoothScroll href="#aboutsection">
+                                <ScrambleText className="cursor-pointer font-space_grotesk">
+                                    Découvrez-en plus
+                                </ScrambleText>
+                            </SmoothScroll>
                         </p>
                         <span className="flex justify-center">
                             <ScrollAnimation>
