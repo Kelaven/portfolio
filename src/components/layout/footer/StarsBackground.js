@@ -30,7 +30,7 @@ const StarsBackground = () => {
             fpsLimit: 60,
             particles: {
                 number: {
-                    value: 250, // Nombre d'étoiles
+                    value: 200, // Nombre d'étoiles
                     density: {
                         enable: true,
                         value_area: 800,
@@ -71,7 +71,7 @@ const StarsBackground = () => {
             <Particles
                 id="tsparticles"
                 options={options} // Appliquer les options définies
-                className="h-96"
+                className="h-96 w-full"
             />
         );
     }
