@@ -71,6 +71,7 @@ const StarsBackground = () => {
             <Particles
                 id="tsparticles"
                 options={options} // Appliquer les options définies
+                className="h-96"
             />
         );
     }
