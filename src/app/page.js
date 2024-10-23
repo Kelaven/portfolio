@@ -1,10 +1,9 @@
 import Layout from "@/components/layout/Layout";
+
+import HeroSection from "@/components/sections/heroSection/HeroSection";
 import AboutSection from "@/components/sections/aboutSection/AboutSection";
 import ProjectsSection from "@/components/sections/projectsSection/ProjectsSection";
 import ContactSection from "@/components/sections/contactSection/ContactSection";
-import HeroSection from "@/components/sections/heroSection/HeroSection";
-import { Suspense } from "react";
-import Loading from "@/components/loading/Loading";
 
 export default function Home() {
   return (

@@ -1,12 +1,28 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
 import React from 'react';
-import SkillsThreeScene from '../../skills/SkillsThreeScene';
+// import SkillsThreeScene from '../../skills/SkillsThreeScene';
 import Image from 'next/image';
 import ScrambleText from '../../common/ScrambleText';
 import ScrollAnimation from '../../common/ScrollAnimation';
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import SmoothScroll from '@/components/common/SmoothScroll';
+import dynamic from 'next/dynamic';
+
+// Charger SkillsThreeScene de manière différée
+const SkillsThreeScene = dynamic(() => import('../../skills/SkillsThreeScene'), {
+    ssr: false, // Désactiver le rendu côté serveur pour ce composant
+    loading: () => (
+        <div className="flex justify-center items-center h-40">
+            <div className="loaderSpinner"></div>
+        </div>
+    ),
+});
+
+// Charger FontAwesomeIcon de manière différée pour l'icône de téléchargement
+const DynamicFontAwesomeIcon = dynamic(() => import('@fortawesome/react-fontawesome').then(mod => mod.FontAwesomeIcon), {
+    ssr: false // Désactiver le rendu côté serveur pour cette icône
+});
 
 function AboutSection() {
     return (
@@ -39,7 +55,7 @@ function AboutSection() {
                                     Télécharger mon CV
                                 </ScrambleText>
                             </a>
-                            <FontAwesomeIcon icon={faDownload} />
+                            <DynamicFontAwesomeIcon icon={faDownload} />
                         </li>
                         <li className='cursor-pointer font-space_grotesk'>
                             <SmoothScroll href="#contactsection">

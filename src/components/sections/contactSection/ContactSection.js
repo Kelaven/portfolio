@@ -63,6 +63,7 @@ function ContactSection() {
                         <ContactSectionCard />
                     </div>
                 </div>
+                <div className='h-28'></div>
                 <ContactCircle />
             </div>
             {/* <div className='bg-black h-96 md:h-0'></div> */}

@@ -2,8 +2,14 @@
 
 
 import React from 'react'
-import MeteorCanva from './MeteorCanva';
+import dynamic from 'next/dynamic';
+
+// import MeteorCanva from './MeteorCanva';
 import { METEORSDATA } from '@/constants/meteorsData';
+
+
+// Charger MeteorCanva de manière dynamique et désactiver SSR
+const MeteorCanva = dynamic(() => import('./MeteorCanva'), { ssr: false });
 
 function SkillsThreeScene() {
     // console.log(METEORSDATA);

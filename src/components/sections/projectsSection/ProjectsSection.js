@@ -1,12 +1,23 @@
 "use client";
 
 import React, { useEffect, useState } from 'react';
-import ProjectsSectionCard from './ProjectsSectionCard';
+// import ProjectsSectionCard from './ProjectsSectionCard';
 import ScrollAnimation from '../../common/ScrollAnimation';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import MobileScrollAnimation from '@/components/common/MobileScrollAnimation';
+import dynamic from 'next/dynamic';
 
+
+// Charger ProjectsSectionCard de manière différée
+const ProjectsSectionCard = dynamic(() => import('./ProjectsSectionCard'), {
+    ssr: false, // Désactiver le rendu côté serveur
+    loading: () => (
+        <div className="flex justify-center items-center h-40">
+            <div className="loaderSpinnerProjects"></div>
+        </div>
+    ),
+});
 
 
 function ProjectsSection() {
@@ -46,13 +57,6 @@ function ProjectsSection() {
                     <h2 className='text-white text-4xl pb-10 font-bold'>Projets en ligne</h2>
                     <ProjectsSectionCard onLoad={handleCardLoad} />
                 </div>
-                {/* {isLoaded && (
-                    <div className="text-white flex justify-center bg-black">
-                        <ScrollAnimation>
-                            <FontAwesomeIcon icon={faCircle} className="text-xl" />
-                        </ScrollAnimation>
-                    </div>
-                )} */}
                 {isLoaded && (
                     <div className="text-white flex justify-center pt-20">
                         {isMobile ? (
