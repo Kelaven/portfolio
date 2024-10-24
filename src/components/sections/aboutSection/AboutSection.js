@@ -65,7 +65,7 @@ function AboutSection() {
                             </SmoothScroll>
                         </li>
                     </ul>
-                    <div>
+                    <div className='min-h-96 sm:min-h-48'>
                         <SkillsThreeScene />
                     </div>
                 </div>

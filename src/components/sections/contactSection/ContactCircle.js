@@ -10,6 +10,7 @@ import MobileScrollAnimation from '@/components/common/MobileScrollAnimation';
 function ContactCircle() {
 
     const [isMobile, setIsMobile] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
     useEffect(() => {
         const handleResize = () => {
@@ -26,19 +27,32 @@ function ContactCircle() {
         };
     }, []);
 
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsLoading(true);
+        }, 1000);
+
+        return () => {
+            clearTimeout(timer);
+        }
+    }, [])
+
+
     return (
-        <div className="text-black flex justify-center">
-            {isMobile ? (
-                <MobileScrollAnimation>
-                    <FontAwesomeIcon icon={faCircle} className="text-xl" />
-                </MobileScrollAnimation>
-            ) : (
-                <ScrollAnimation>
-                    <FontAwesomeIcon icon={faCircle} className="text-xl" />
-                </ScrollAnimation>
-            )}
-        </div>
-    )
+        isLoading && (
+            <div className="text-black flex justify-center">
+                {isMobile ? (  // si oui, adapter les markers de scrolltrigger
+                    <MobileScrollAnimation>
+                        <FontAwesomeIcon icon={faCircle} className="text-xl" />
+                    </MobileScrollAnimation>
+                ) : (
+                    <ScrollAnimation>
+                        <FontAwesomeIcon icon={faCircle} className="text-xl" />
+                    </ScrollAnimation>
+                )}
+            </div>
+        )
+    );
 }
 
-export default ContactCircle
+export default ContactCircle;

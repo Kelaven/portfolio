@@ -37,4 +37,4 @@ function MeteorCanva({ ...props }) {
     )
 }
 
-export default MeteorCanva
+export default MeteorCanva;
