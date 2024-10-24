@@ -1,9 +1,11 @@
+import dynamic from 'next/dynamic';
 import Layout from "@/components/layout/Layout";
-
 import HeroSection from "@/components/sections/heroSection/HeroSection";
-import AboutSection from "@/components/sections/aboutSection/AboutSection";
-import ProjectsSection from "@/components/sections/projectsSection/ProjectsSection";
-import ContactSection from "@/components/sections/contactSection/ContactSection";
+
+// Charger les sections de manière différée mais avec SSR activé pour préserver le SEO
+const AboutSection = dynamic(() => import("@/components/sections/aboutSection/AboutSection"), { ssr: true });
+const ProjectsSection = dynamic(() => import("@/components/sections/projectsSection/ProjectsSection"), { ssr: true });
+const ContactSection = dynamic(() => import("@/components/sections/contactSection/ContactSection"), { ssr: true });
 
 export default function Home() {
   return (
@@ -20,6 +22,6 @@ export default function Home() {
       <section id="contactsection" className="overflow-hidden">
         <ContactSection />
       </section>
-    </Layout >
+    </Layout>
   );
 }

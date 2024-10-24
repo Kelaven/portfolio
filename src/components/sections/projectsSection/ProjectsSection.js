@@ -72,8 +72,6 @@ function ProjectsSection() {
                 )}
             </div>
             <div className='h-28 md:h-80'></div>
-            {/* <div className="h-20 mobile-large:h-44 sm:h-64 md:h-72 lg:h-96 bg-black"></div> */}
-            {/* <div className='h-32 bg-black'></div> */}
         </>
     )
 }

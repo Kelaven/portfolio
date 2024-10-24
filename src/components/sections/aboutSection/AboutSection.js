@@ -1,7 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDownload } from "@fortawesome/free-solid-svg-icons";
-import React from 'react';
-// import SkillsThreeScene from '../../skills/SkillsThreeScene';
 import Image from 'next/image';
 import ScrambleText from '../../common/ScrambleText';
 import ScrollAnimation from '../../common/ScrollAnimation';
