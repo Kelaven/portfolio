@@ -1,7 +1,7 @@
 "use client";
 
-import { Decal, Float, Icosahedron, useTexture } from '@react-three/drei'
-import React, { useEffect, useRef, useState } from 'react'
+import { Decal, Float, Icosahedron, useTexture } from '@react-three/drei';
+import React, { useEffect, useRef, useState } from 'react';
 
 function Meteor({ img, color, colormap, normalmap, roughnessmap }) {
     const [decal, colorMap, normalMap, roughnessMap] = useTexture([

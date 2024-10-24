@@ -6,12 +6,15 @@ import ScrollAnimation from '../../common/ScrollAnimation';
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import SmoothScroll from '@/components/common/SmoothScroll';
 import dynamic from 'next/dynamic';
+import AboutSectionObserverWrapper from './AboutSectionObserverWrapper';
+
 
 // Charger SkillsThreeScene de manière différée
 const SkillsThreeScene = dynamic(() => import('../../skills/SkillsThreeScene'), {
     ssr: false, // Désactiver le rendu côté serveur pour ce composant
     loading: () => (
-        <div className="flex justify-center items-center h-40">
+        <div className="flex justify-center items-center h-40 flex-col">
+            <p className='font-space_grotesk text-[#ed471a] text-center'>Chargement...</p>
             <div className="loaderSpinner"></div>
         </div>
     ),
@@ -63,8 +66,10 @@ function AboutSection() {
                             </SmoothScroll>
                         </li>
                     </ul>
-                    <div className='min-h-96 sm:min-h-48'>
-                        <SkillsThreeScene />
+                    <div className='min-h-96 sm:min-h-80 2xl:min-h-48'>
+                        <AboutSectionObserverWrapper>
+                            <SkillsThreeScene />
+                        </AboutSectionObserverWrapper>
                     </div>
                 </div>
                 <div className='xl:w-1/2 flex justify-center items-center my-10 md:py-6 xl:my-0'>

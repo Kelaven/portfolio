@@ -1,11 +1,24 @@
 import React from 'react';
 import TextAnimation from "@/components/common/TextAnimation";
-import ThreeScene from "@/components/hero/ThreeScene";
+// import ThreeScene from "@/components/hero/ThreeScene";
 import ScrambleText from "@/components/common/ScrambleText";
 import ScrollAnimation from "@/components/common/ScrollAnimation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import SmoothScroll from '@/components/common/SmoothScroll';
+import dynamic from 'next/dynamic';
+
+
+const ThreeScene = dynamic(() => import('../../hero/ThreeScene'), {
+    ssr: false,
+    loading: () => (
+        <div className="relative top-0 left-0 h-screen w-screen bg-black z-50">
+            <div id="fadeAnimation" className="flex h-full w-full justify-center items-center text-white font-space_grotesk">
+                Chargement...
+            </div>
+        </div>
+    ),
+});
 
 function HeroSection() {
     return (
