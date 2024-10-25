@@ -4,7 +4,7 @@ import TextAnimation from "@/components/common/TextAnimation";
 import ScrambleText from "@/components/common/ScrambleText";
 import ScrollAnimation from "@/components/common/ScrollAnimation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircle } from "@fortawesome/free-solid-svg-icons";
+import { faCircle, faRocket } from "@fortawesome/free-solid-svg-icons";
 import SmoothScroll from '@/components/common/SmoothScroll';
 import dynamic from 'next/dynamic';
 
@@ -36,9 +36,14 @@ function HeroSection() {
                         </TextAnimation>
                     </p>
                     <div className="text-sm pt-10">
+                        <p className='pb-2'>
+                            <TextAnimation Yanimation={true}>
+                                À l&apos;écoute d&apos;opportunités <FontAwesomeIcon icon={faRocket} className="text-xs" />
+                            </TextAnimation>
+                        </p>
                         <p>
                             <TextAnimation Yanimation={true}>
-                                Actuellement : <span className="font-bold">À l&apos;écoute d&apos;opportunités</span>
+                                Actuellement : <span className="font-bold">Développeur auto-entrepreneur</span>
                             </TextAnimation>
                         </p>
                         <p className="text-pretty">
