@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://https://kevin-lavenant.fr/sitemap.xml
