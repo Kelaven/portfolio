@@ -1,10 +1,12 @@
 "use client";
 
+
 import { useEffect, useRef, useState } from "react";
 
-const FooterObserverWrapper = ({ children }) => {
+const ProjectsSectionObserverWrapper = ({ children, id }) => {
     const [isVisible, setIsVisible] = useState(false);
     const wrapperRef = useRef(null);
+
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -15,7 +17,7 @@ const FooterObserverWrapper = ({ children }) => {
             },
             {
                 threshold: 0.1,
-                rootMargin: "1150px 0px"
+                rootMargin: "100px 0px"
             }
         );
 
@@ -31,15 +33,13 @@ const FooterObserverWrapper = ({ children }) => {
         };
     }, []);
 
-    return (
-        isVisible ? children :
-            (
-                <div ref={wrapperRef} className=" h-40 flex flex-col items-center">
-                    <p className='font-space_grotesk text-[#ed471a] text-center mb-14'>Chargement...</p>
-                    <div className="loaderSpinnerFooter"></div>
-                </div>
-            )
+    return isVisible ? children : (
+        <div ref={wrapperRef} className="flex justify-center items-center h-40 flex-col mb-4">
+            <p className='font-space_grotesk text-[#ed471a] text-center'>Chargement...</p>
+
+            <div className="loaderSpinnerProjects"></div>
+        </div>
     );
 };
 
-export default FooterObserverWrapper;
+export default ProjectsSectionObserverWrapper;

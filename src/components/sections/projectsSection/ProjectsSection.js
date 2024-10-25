@@ -12,12 +12,12 @@ import dynamic from 'next/dynamic';
 // Charger ProjectsSectionCard de manière différée
 const ProjectsSectionCard = dynamic(() => import('./ProjectsSectionCard'), {
     ssr: false, // Désactiver le rendu côté serveur
-    // loading: () => (
-    //     <div className="flex justify-center items-center h-40">
-    //         <div className="loaderSpinnerProjects"></div>
-    //     </div>
-    // ),
-    suspense: true
+    loading: () => (
+        <div className="flex justify-center items-center h-40 flex-col">
+            <p className='font-space_grotesk text-[#ed471a] text-center mb-4'>Chargement...</p>
+            <div className="loaderSpinnerProjects"></div>
+        </div>
+    ),
 });
 
 
@@ -56,11 +56,7 @@ function ProjectsSection() {
                 <div className="blurred-background-reverse absolute bottom-[3%] lg:bottom-[6%] right-[5%] lg:left-[10%] w-[200px] h-[200px] xl:w-[300px] xl:h-[150px] z-0"></div>
                 <div className='relative'>
                     <h2 className='text-white text-4xl pb-10 font-bold'>Projets en ligne</h2>
-                    <Suspense fallback={<div className="flex justify-center items-center h-40">
-                        <div className="loaderSpinnerProjects"></div>
-                    </div>}>
-                        <ProjectsSectionCard onLoad={handleCardLoad} />
-                    </Suspense>
+                    <ProjectsSectionCard onLoad={handleCardLoad} />
                 </div>
                 {isLoaded && (
                     <div className="text-white flex justify-center pt-20">
