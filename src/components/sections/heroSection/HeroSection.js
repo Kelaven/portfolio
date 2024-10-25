@@ -43,7 +43,7 @@ function HeroSection() {
                         </p>
                         <p>
                             <TextAnimation Yanimation={true}>
-                                Actuellement : <span className="font-bold">Développeur auto-entrepreneur</span>
+                                Actuellement : <span className="font-bold">Développeur à mon compte</span>
                             </TextAnimation>
                         </p>
                         <p className="text-pretty">

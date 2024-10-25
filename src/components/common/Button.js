@@ -9,7 +9,7 @@ import ModalHeader from "../layout/header/ModalHeader";
 gsap.registerPlugin(TextPlugin);
 
 
-function Button({ children, headerMenuBtn }) {
+function Button({ children, headerMenuBtn, headerHomeBtn }) {
 
     const headerBtnsRef = useRef(null);
     const [openMenu, setOpenMenu] = useState(false);
@@ -53,6 +53,8 @@ function Button({ children, headerMenuBtn }) {
     const handleClick = () => {
         if (headerMenuBtn) {
             setOpenMenu(!openMenu);
+        } else if (headerHomeBtn) {
+            window.location.href = "http://localhost:3000/";
         }
     }
 
@@ -74,4 +76,4 @@ function Button({ children, headerMenuBtn }) {
     )
 }
 
-export default Button
+export default Button;
