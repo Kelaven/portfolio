@@ -20,6 +20,11 @@ const roboto = Roboto({
 export const metadata = {
   title: "Portfolio - Kévin Lavenant, Développeur Web & Photographe",
   description: "Découvrez le portfolio de Kévin Lavenant, développeur web passionné et photographe. Présentation, compétences, projets, contact et recommandations.",
+  icons: {
+    icon: '/favicon.ico', // pour le favicon classique
+    shortcut: '/favicon.ico', // pour l'icône de raccourci
+    apple: '/apple-touch-icon.png', // pour les appareils Apple (180x180 px)
+  },
   openGraph: {
     title: "Portfolio - Kévin Lavenant",
     description: "Développeur Web & Photographe passionné, découvrez mes projets et compétences.",
@@ -40,9 +45,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="fr">
       <body className={`${spaceGrotesk.variable} ${roboto.variable}`}>
-        <ScrollSmooth>
-          {children}
-        </ScrollSmooth>
+        {/* <ScrollSmooth> */}
+        {children}
+        {/* </ScrollSmooth> */}
       </body>
     </html>
   );

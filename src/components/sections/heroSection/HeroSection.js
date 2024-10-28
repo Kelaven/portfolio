@@ -23,7 +23,7 @@ const ThreeScene = dynamic(() => import('../../hero/ThreeScene'), {
 function HeroSection() {
     return (
         <>
-            <div className="relative w-full h-screen flex items-center justify-center flex-col bg-black">
+            <div className="relative w-full h-svh flex items-center justify-center flex-col bg-black">
                 <div className="absolute z-10 text-white text-center font-thin px-4 md:px-10 lg:px-40 xl:px-96 text-2xl">
                     <h1>
                         <TextAnimation Yanimation={true}>
@@ -63,16 +63,16 @@ function HeroSection() {
                                 </ScrambleText>
                             </SmoothScroll>
                         </p>
-                        <span className="flex justify-center">
+                        {/* <span className="flex justify-center">
                             <ScrollAnimation>
                                 <FontAwesomeIcon icon={faCircle} className="text-xs pt-2" />
                             </ScrollAnimation>
-                        </span>
+                        </span> */}
                     </TextAnimation>
                 </div>
             </div>
-            <div className="h-24 sm:h-64 md:h-72 lg:h-96 bg-black"></div>
-            <div className='sm:pt-20'></div>
+            {/* <div className="h-24 sm:h-64 md:h-72 lg:h-96 bg-black"></div>
+            <div className='sm:pt-20'></div> */}
         </>
     )
 }

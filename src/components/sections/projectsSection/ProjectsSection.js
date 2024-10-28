@@ -48,7 +48,7 @@ function ProjectsSection() {
 
     return (
         <>
-            <div className='relative min-h-200vh w-full bg-black px-4 md:px-12 lg:px-24'>
+            <div className='relative min-h-200vh w-full bg-black px-4 md:px-12 lg:px-24 pt-6'>
                 <div className="blurred-background absolute top-[2.5%] left-[3%] lg:top-[5%] lg:left-[7%] w-[200px] h-[200px] xl:w-[300px] xl:h-[300px] z-0"></div>
                 <div className="blurred-background absolute top-[25%] left-[25%] w-[250px] h-[400px] md:w-[0px] md:h-[0px] z-0"></div>
                 <div className="blurred-background absolute top-[45%] left-[70%] lg:top-[45%] lg:right-[6%] w-[250px] h-[400px] lg:w-[350px] lg:h-[500px] z-0"></div>
@@ -56,9 +56,10 @@ function ProjectsSection() {
                 <div className="blurred-background-reverse absolute bottom-[3%] lg:bottom-[6%] right-[5%] lg:left-[10%] w-[200px] h-[200px] xl:w-[300px] xl:h-[150px] z-0"></div>
                 <div className='relative'>
                     <h2 className='text-white text-4xl pb-10 font-bold'>Projets en ligne</h2>
+                    <p className='italic text-white pt-10'>Section en cours de mise à jour... Stay tunned !</p>
                     <ProjectsSectionCard onLoad={handleCardLoad} />
                 </div>
-                {isLoaded && (
+                {/* {isLoaded && (
                     <div className="text-white flex justify-center pt-20">
                         {isMobile ? (
                             <MobileScrollAnimation>
@@ -70,9 +71,9 @@ function ProjectsSection() {
                             </ScrollAnimation>
                         )}
                     </div>
-                )}
+                )} */}
             </div>
-            <div className='h-28 md:h-80'></div>
+            {/* <div className='h-28 md:h-80'></div> */}
         </>
     )
 }

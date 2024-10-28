@@ -7,11 +7,11 @@ function ContactSection() {
     return (
         <>
 
-            <div className='min-h-screen px-4 md:px-12 lg:px-24  bg-white text-black flex flex-col justify-center'>
-                <h2 className='text-4xl font-bold pb-10 sm:pt-14'>
+            <div className='min-h-screen px-4 md:px-12 lg:px-24  bg-white text-black flex flex-col justify-center pt-6'>
+                <h2 className='text-4xl font-bold pb-10'>
                     Contactez-moi
                 </h2>
-                <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-10 pb-20">
+                <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-10">
                     {/* sidebar */}
                     <div className="text-left space-y-6">
                         <div>
@@ -63,8 +63,8 @@ function ContactSection() {
                         <ContactSectionCard />
                     </div>
                 </div>
-                <div className='h-28'></div>
-                <ContactCircle />
+                {/* <div className='h-28'></div>
+                <ContactCircle /> */}
             </div>
             {/* <div className='bg-black h-96 md:h-0'></div> */}
         </>

@@ -28,7 +28,7 @@ const DynamicFontAwesomeIcon = dynamic(() => import('@fortawesome/react-fontawes
 function AboutSection() {
     return (
         <>
-            <div className='px-4 md:px-12 lg:px-24 xl:flex'>
+            <div className='min-h-svh px-4 md:px-12 lg:px-24 xl:flex pt-6'>
                 <div className='xl:w-1/2 2xl:w-[700px] lg:pe-24'>
                     <h2 className='text-4xl font-bold'>
                         Hello world !
@@ -66,11 +66,11 @@ function AboutSection() {
                             </SmoothScroll>
                         </li>
                     </ul>
-                    <div className='min-h-96 sm:min-h-64 2xl:min-h-48'>
-                        <AboutSectionObserverWrapper>
-                            <SkillsThreeScene />
-                        </AboutSectionObserverWrapper>
-                    </div>
+                    {/* <div className='min-h-96 sm:min-h-64 2xl:min-h-48'> */}
+                    <AboutSectionObserverWrapper>
+                        <SkillsThreeScene />
+                    </AboutSectionObserverWrapper>
+                    {/* </div> */}
                 </div>
                 <div className='xl:w-1/2 flex justify-center items-center my-10 md:py-6 xl:my-0'>
                     <div className='w-72 h-96 lg:me-20 xl:me-0 xl:h-2/3 xl:w-96 relative'>
@@ -84,12 +84,12 @@ function AboutSection() {
                     </div>
                 </div>
             </div>
-            <div className="bottom-10 text-black flex justify-center pt-14">
+            {/* <div className="bottom-10 text-black flex justify-center pt-14">
                 <ScrollAnimation>
                     <FontAwesomeIcon icon={faCircle} className="text-xl" />
                 </ScrollAnimation>
             </div>
-            <div className="h-20 sm:h-48 bg-black"></div>
+            <div className="h-20 sm:h-48 bg-black"></div> */}
         </>
     )
 }
