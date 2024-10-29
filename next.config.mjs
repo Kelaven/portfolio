@@ -3,7 +3,7 @@ const nextConfig = {
     images: {
         remotePatterns: [
             {
-                hostname: 'https://api.kevin-lavenant.fr/',
+                hostname: 'api.kevin-lavenant.fr',
             },
         ],
     },
