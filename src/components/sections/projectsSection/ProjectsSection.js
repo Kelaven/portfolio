@@ -1,7 +1,7 @@
 "use client";
 
 import React, { Suspense, useEffect, useState } from 'react';
-// import ProjectsSectionCard from './ProjectsSectionCard';
+import ProjectsSectionCard from './ProjectsSectionCard';
 import ScrollAnimation from '../../common/ScrollAnimation';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
