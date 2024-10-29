@@ -56,7 +56,7 @@ function ProjectsSection() {
                 <div className="blurred-background-reverse absolute bottom-[3%] lg:bottom-[6%] right-[5%] lg:left-[10%] w-[200px] h-[200px] xl:w-[300px] xl:h-[150px] z-0"></div>
                 <div className='relative'>
                     <h2 className='text-white text-4xl pb-10 font-bold'>Projets en ligne</h2>
-                    <p className='italic text-white pt-10'>Section en cours de mise à jour... Stay tunned !</p>
+                    {/* <p className='italic text-white pt-10'>Section en cours de mise à jour... Stay tunned !</p> */}
                     <ProjectsSectionCard onLoad={handleCardLoad} />
                 </div>
                 {/* {isLoaded && (
