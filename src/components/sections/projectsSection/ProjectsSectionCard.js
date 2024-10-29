@@ -75,7 +75,7 @@ function ProjectsSectionCard({ onLoad }) {
                     </div>
                     <div className='flex-1 flex justify-center pt-6 md:pt-0'> {/* Conteneur de l'image */}
                         <Image
-                            src={`https://api.kevin-lavenant.fr/uploads/images/${project.picture}`}
+                            src={project.picture}
                             alt="Photo de présentation du projet"
                             width={500}
                             height={500}
@@ -91,4 +91,4 @@ function ProjectsSectionCard({ onLoad }) {
     )
 }
 
-export default ProjectsSectionCard
+export default ProjectsSectionCard;
