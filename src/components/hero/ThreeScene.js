@@ -8,7 +8,7 @@ function ThreeScene() {
 
 
     return (
-        <Canvas dpr={[1, 2]}>
+        <Canvas dpr={[1, 2]} style={{ pointerEvents: 'none' }}>
             <PerspectiveCamera makeDefault fov={45} position={[0, 0, 20]} up={[0, 0, -1]} />
             <pointLight
                 color={0xffffff}
@@ -22,7 +22,8 @@ function ThreeScene() {
                 enableZoom={false}
                 autoRotate={true}
                 autoRotateSpeed={1.5}
-                enableRotate={false} />
+                enableRotate={false}
+            />
         </Canvas>
     )
 }

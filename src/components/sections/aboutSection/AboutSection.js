@@ -49,7 +49,7 @@ function AboutSection() {
                     <p className='pb-4'>
                         Je suis à l&apos;écoute de nouvelles opportunités, n&apos;hésitez pas à me contacter !
                     </p>
-                    <ul className='pt-4 pb-6 flex'>
+                    <ul className='pt-4 pb-6 flex flex-wrap'>
                         <li className='me-8 cursor-pointer'>
                             <a href="/assets/documents/CV_Kevin_LAVENANT-DW.pdf" download>
                                 <ScrambleText className='font-space_grotesk pe-1'>
