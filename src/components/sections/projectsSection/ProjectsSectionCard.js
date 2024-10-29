@@ -12,7 +12,7 @@ function ProjectsSectionCard({ onLoad }) {
     useEffect(() => {
         async function fetchProjects() {
             try {
-                const response = await fetch('http://127.0.0.1:8000/api/projects');
+                const response = await fetch('https://api.kevin-lavenant.fr/api/projects');
                 if (response.ok) {
                     const projects = await response.json();
                     if (Array.isArray(projects)) {
