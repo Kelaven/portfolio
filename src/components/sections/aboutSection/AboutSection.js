@@ -72,7 +72,7 @@ function AboutSection() {
                     </AboutSectionObserverWrapper>
                     {/* </div> */}
                 </div>
-                <div className='xl:w-1/2 flex justify-center items-center my-10 md:py-6 xl:my-0'>
+                <div className='xl:w-1/2 flex justify-center items-center my-10 py-4 md:py-6 xl:my-0'>
                     <div className='w-72 h-96 lg:me-20 xl:me-0 xl:h-2/3 xl:w-96 relative'>
                         <Image
                             src='/assets/images/cv-photo-profil-650-100.jpg'
