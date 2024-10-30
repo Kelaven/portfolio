@@ -71,6 +71,7 @@ function ProjectsSection() {
                     </div>
                 )} */}
             </div>
+            <div className='h-10 bg-black'></div>
             {/* <div className='h-28 md:h-80'></div> */}
         </>
     )
