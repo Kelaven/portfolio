@@ -19,7 +19,8 @@ const AboutSectionObserverWrapper = ({ children, id }) => {
             },
             {
                 threshold: 0.1,  // si au moins 10 % de l’élément est visible, l’observer déclenchera l’action
-                rootMargin: "440px 0px" // Déclenche l'action 440px avant que l'élément ne soit visible, pour remonter dans le contenu et déclencher plus tôt (quand l'utilisateur arrive au h2)
+                // rootMargin: "440px 0px" // Déclenche l'action 440px avant que l'élément ne soit visible, pour remonter dans le contenu et déclencher plus tôt (quand l'utilisateur arrive au h2)
+                rootMargin: "0px 0px" // Déclenche l'action 440px avant que l'élément ne soit visible, pour remonter dans le contenu et déclencher plus tôt (quand l'utilisateur arrive au h2)
             }
         );
 
