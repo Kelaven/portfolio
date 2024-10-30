@@ -34,7 +34,7 @@ function AboutSection() {
                         Hello world !
                     </h2>
                     <p className='pt-4 pb-2 text-lg'>
-                        Moi c&apos;est Kévin, un <strong>passionné</strong> dans l'âme, qui s&apos;est tourné vers le développement web pour donner vie à ses idées et accompagner ses clients dans leurs plus beaux projets.
+                        Moi c&apos;est Kévin, un <strong>passionné</strong> dans l&apos;âme, qui s&apos;est tourné vers le développement web pour donner vie à ses idées et accompagner ses clients dans leurs plus beaux projets.
                     </p>
                     <p className='py-4'>
                         J&apos;aime sortir des sentiers battus pour proposer du contenu interactif, qui capte l&apos;attention des internautes et met en avant un travail rigoureux.
