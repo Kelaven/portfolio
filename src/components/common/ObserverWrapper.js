@@ -5,7 +5,7 @@
 
 import { useEffect, useRef, useState } from "react";
 
-const AboutSectionObserverWrapper = ({ children, id }) => {
+const ObserverWrapper = ({ children, id }) => {
     const [isVisible, setIsVisible] = useState(false);
     const wrapperRef = useRef(null);
 
@@ -20,7 +20,7 @@ const AboutSectionObserverWrapper = ({ children, id }) => {
             {
                 threshold: 0.1,  // si au moins 10 % de l’élément est visible, l’observer déclenchera l’action
                 // rootMargin: "440px 0px" // Déclenche l'action 440px avant que l'élément ne soit visible, pour remonter dans le contenu et déclencher plus tôt (quand l'utilisateur arrive au h2)
-                rootMargin: "0px 0px" // Déclenche l'action 440px avant que l'élément ne soit visible, pour remonter dans le contenu et déclencher plus tôt (quand l'utilisateur arrive au h2)
+                rootMargin: "0px 0px" // Possibilité de modification : Par exmeple, peut déclencher l'action 440px avant que l'élément ne soit visible, pour remonter dans le contenu et déclencher plus tôt
             }
         );
 
@@ -45,7 +45,7 @@ const AboutSectionObserverWrapper = ({ children, id }) => {
     );
 };
 
-export default AboutSectionObserverWrapper;
+export default ObserverWrapper;
 
 
 // ! NB : 

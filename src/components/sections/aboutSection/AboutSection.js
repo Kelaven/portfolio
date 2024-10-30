@@ -6,7 +6,7 @@ import ScrollAnimation from '../../common/ScrollAnimation';
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import SmoothScroll from '@/components/common/SmoothScroll';
 import dynamic from 'next/dynamic';
-import AboutSectionObserverWrapper from './AboutSectionObserverWrapper';
+import ObserverWrapper from '@/components/common/ObserverWrapper';
 
 
 // Charger SkillsThreeScene de manière différée
@@ -34,7 +34,7 @@ function AboutSection() {
                         Hello world !
                     </h2>
                     <p className='pt-4 pb-2 text-lg'>
-                        Moi c&apos;est Kévin, un <strong>passionné</strong> de nature qui s&apos;est tourné vers le développement web pour donner vie à ses idées et accompagner ses clients dans leurs plus beaux projets.
+                        Moi c&apos;est Kévin, un <strong>passionné</strong> dans l'âme, qui s&apos;est tourné vers le développement web pour donner vie à ses idées et accompagner ses clients dans leurs plus beaux projets.
                     </p>
                     <p className='py-4'>
                         J&apos;aime sortir des sentiers battus pour proposer du contenu interactif, qui capte l&apos;attention des internautes et met en avant un travail rigoureux.
@@ -67,9 +67,9 @@ function AboutSection() {
                         </li>
                     </ul>
                     {/* <div className='min-h-96 sm:min-h-64 2xl:min-h-48'> */}
-                    <AboutSectionObserverWrapper>
+                    <ObserverWrapper>
                         <SkillsThreeScene />
-                    </AboutSectionObserverWrapper>
+                    </ObserverWrapper>
                     {/* </div> */}
                 </div>
                 <div className='xl:w-1/2 flex justify-center items-center my-10 py-4 md:py-6 xl:my-0'>

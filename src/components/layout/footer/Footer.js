@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import FooterObserverWrapper from "./FooterObserverWrapper";
+import ObserverWrapper from "@/components/common/ObserverWrapper";
 // import ClientStarsBackground from "./ClientStarsBackground";
 
 // Charger StarsBackground de manière différée
@@ -19,9 +19,9 @@ const Footer = () => {
     return (
         <footer className="w-full min-h-[25vh] p-6 bg-black text-white text-center flex justify-center items-end">
             <div className="relative w-full flex flex-col h-96">
-                <FooterObserverWrapper>
+                <ObserverWrapper>
                     <StarsBackground />
-                </FooterObserverWrapper>
+                </ObserverWrapper>
             </div>
             <p className="absolute">&copy; Site créé par Kévin Lavenant, 2024</p>
         </footer>
