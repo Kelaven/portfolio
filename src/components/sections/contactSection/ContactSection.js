@@ -7,7 +7,7 @@ function ContactSection() {
     return (
         <>
 
-            <div className='min-h-screen px-4 md:px-12 lg:px-24  bg-white text-black flex flex-col justify-center pt-12 pb-6'>
+            <div className='min-h-screen px-4 md:px-12 lg:px-24  bg-white text-black flex flex-col justify-center pt-12 pb-1'>
                 <h2 className='text-4xl font-bold pb-10'>
                     Contactez-moi
                 </h2>
