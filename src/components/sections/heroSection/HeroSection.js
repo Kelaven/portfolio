@@ -27,12 +27,13 @@ function HeroSection() {
                 <div className="absolute z-10 text-white text-center font-thin px-4 md:px-10 lg:px-40 xl:px-96 text-2xl">
                     <h1>
                         <TextAnimation Yanimation={true}>
-                            Je suis <strong className="font-bold">développeur web</strong> et <strong className="font-bold">photographe</strong>.
+                            <strong className="font-bold">Bievenue</strong> dans mon <strong className="font-bold">univers</strong>.
+                            {/* Je suis <strong className="font-bold">développeur web</strong> et <strong className="font-bold">photographe</strong>. */}
                         </TextAnimation>
                     </h1>
                     <p>
                         <TextAnimation Yanimation={true}>
-                            J&apos;aime <span className="font-bold">imaginer</span>, <span className="font-bold">créer</span>, et <span className="font-bold">donner vie à mes idées</span>.
+                            J&apos;aime <span className="font-bold">imaginer</span>, <span className="font-bold">créer</span> et <span className="font-bold">donner vie à mes idées</span>.
                         </TextAnimation>
                     </p>
                     <div className="text-sm pt-10">
@@ -43,7 +44,7 @@ function HeroSection() {
                         </p>
                         <p>
                             <TextAnimation Yanimation={true}>
-                                <FontAwesomeIcon icon={faSun} className="text-xs" />Emploi de jour : <span className="font-bold">Chargé de clientèle en banque</span>
+                                <FontAwesomeIcon icon={faSun} className="text-xs" /> Emploi de jour : <span className="font-bold">Chargé de clientèle en banque</span>
                             </TextAnimation>
                             {/* <TextAnimation Yanimation={true}>
                                 Actuellement : <span className="font-bold">Développeur à mon compte</span>
@@ -51,7 +52,7 @@ function HeroSection() {
                         </p>
                         <p className="text-pretty">
                             <TextAnimation Yanimation={true}>
-                                <FontAwesomeIcon icon={faMoon} className="text-xs" />Emploi de nuit : <span className="font-bold">Développeur Web</span>
+                                <FontAwesomeIcon icon={faMoon} className="text-xs" /> Emploi de nuit : <span className="font-bold">Développeur Web</span>
                             </TextAnimation>
                             {/* <TextAnimation Yanimation={true}>
                                 Auparavant : <span className="font-bold">Conseiller commercial, 8 ans d&apos;expérience</span>
