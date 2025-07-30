@@ -43,7 +43,7 @@ function HeroSection() {
                         </p>
                         <p>
                             <TextAnimation Yanimation={true}>
-                                Emploi de jour <FontAwesomeIcon icon={faSun} className="text-xs" /> : <span className="font-bold">Chargé de clientèle en banque</span>
+                                <FontAwesomeIcon icon={faSun} className="text-xs" />Emploi de jour : <span className="font-bold">Chargé de clientèle en banque</span>
                             </TextAnimation>
                             {/* <TextAnimation Yanimation={true}>
                                 Actuellement : <span className="font-bold">Développeur à mon compte</span>
@@ -51,7 +51,7 @@ function HeroSection() {
                         </p>
                         <p className="text-pretty">
                             <TextAnimation Yanimation={true}>
-                                Emploi de nuit <FontAwesomeIcon icon={faMoon} className="text-xs" /> : <span className="font-bold">Développeur Web</span>
+                                <FontAwesomeIcon icon={faMoon} className="text-xs" />Emploi de nuit : <span className="font-bold">Développeur Web</span>
                             </TextAnimation>
                             {/* <TextAnimation Yanimation={true}>
                                 Auparavant : <span className="font-bold">Conseiller commercial, 8 ans d&apos;expérience</span>
