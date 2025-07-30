@@ -4,7 +4,7 @@ import TextAnimation from "@/components/common/TextAnimation";
 import ScrambleText from "@/components/common/ScrambleText";
 import ScrollAnimation from "@/components/common/ScrollAnimation";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircle, faRocket } from "@fortawesome/free-solid-svg-icons";
+import { faCircle, faRocket, faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
 import SmoothScroll from '@/components/common/SmoothScroll';
 import dynamic from 'next/dynamic';
 
