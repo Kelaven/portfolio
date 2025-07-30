@@ -37,19 +37,25 @@ function HeroSection() {
                     </p>
                     <div className="text-sm pt-10">
                         <p className='pb-2'>
-                            <TextAnimation Yanimation={true}>
+                            {/* <TextAnimation Yanimation={true}>
                                 À l&apos;écoute d&apos;opportunités <FontAwesomeIcon icon={faRocket} className="text-xs" />
-                            </TextAnimation>
+                            </TextAnimation> */}
                         </p>
                         <p>
                             <TextAnimation Yanimation={true}>
-                                Actuellement : <span className="font-bold">Développeur à mon compte</span>
+                                Emploi de jour <FontAwesomeIcon icon={faSun} className="text-xs" /> : <span className="font-bold">Chargé de clientèle en banque</span>
                             </TextAnimation>
+                            {/* <TextAnimation Yanimation={true}>
+                                Actuellement : <span className="font-bold">Développeur à mon compte</span>
+                            </TextAnimation> */}
                         </p>
                         <p className="text-pretty">
                             <TextAnimation Yanimation={true}>
-                                Auparavant : <span className="font-bold">Conseiller commercial, 8 ans d&apos;expérience</span>
+                                Emploi de nuit <FontAwesomeIcon icon={faMoon} className="text-xs" /> : <span className="font-bold">Développeur Web</span>
                             </TextAnimation>
+                            {/* <TextAnimation Yanimation={true}>
+                                Auparavant : <span className="font-bold">Conseiller commercial, 8 ans d&apos;expérience</span>
+                            </TextAnimation> */}
                         </p>
                     </div>
                 </div>
