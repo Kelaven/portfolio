@@ -27,7 +27,7 @@ function HeroSection() {
                 <div className="absolute z-10 text-white text-center font-thin px-4 md:px-10 lg:px-40 xl:px-96 text-2xl">
                     <h1>
                         <TextAnimation Yanimation={true}>
-                            <strong className="font-bold">Bievenue</strong> dans mon <strong className="font-bold">univers</strong>.
+                            <strong className="font-bold">Bienvenue</strong> dans mon <strong className="font-bold">univers</strong>.
                             {/* Je suis <strong className="font-bold">développeur web</strong> et <strong className="font-bold">photographe</strong>. */}
                         </TextAnimation>
                     </h1>
