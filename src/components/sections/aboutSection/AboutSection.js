@@ -34,21 +34,20 @@ function AboutSection() {
                         Hello world !
                     </h2>
                     <p className='pt-4 pb-2 text-lg'>
-                        Mon histoire se veut simple, mais sincère. En toute honnêteté, je ne suis pas né dans le code. C'est en écrivant mon premier <em>echo "Hello world";</em> (ou plutôt devrais-je dire <em>&lt;p&gt;Hello world&lt;/p&gt;</em>), que j'ai découvert le métier de développeur.
+                        Mon histoire se veut simple, mais sincère. En toute honnêteté, je ne suis pas né dans le code. C&apos;est en écrivant mon premier <em>echo &quot;Hello world&quot;;</em> (ou plutôt devrais-je dire <em>&lt;p&gt;Hello world&lt;/p&gt;</em>), que j&apos;ai découvert le métier de développeur.
                     </p>
                     <p className='py-4'>
-                        J'ai immédiatement adoré la liberté offerte : celle de pouvoir construire des projets de A à Z et de donner vie à toutes mes idées.
-                        <br />
-                        C'est comme ça que je me suis formé et que j'ai pu décrocher mon diplôme de <em>Développeur Web et Web Mobile</em> en 2024.
+                        J&apos;ai immédiatement adoré la liberté offerte : celle de pouvoir construire des projets de A à Z et de donner vie à toutes mes idées.
+                        C&apos;est comme ça que je me suis formé et que j&apos;ai pu décrocher mon diplôme de <em>Développeur Web et Web Mobile</em> en 2024.
                     </p>
                     <p className='pb-4'>
-                        Je travaille actuellement sur la conception d'un outil dédié aux artisans durant mon temps libre — un chantier technique pour parfaire mes connaissances en Symfony. Selon moi, chaque commit a son importance et apporte son lot d'apprentissages.
+                        Je travaille actuellement sur la conception d&apos;un outil dédié aux artisans durant mon temps libre — un chantier technique pour parfaire mes connaissances en Symfony. Selon moi, chaque commit a son importance et apporte son lot d&apos;apprentissages.
                     </p>
                     <p className='pb-4'>
-                        La journée, je suis Chargé de clientèle en Banque. J'ai toujours beaucoup aimé le contact humain et ma carrière de commercial a façonné ma façon d'être et d'interagir avec le monde qui m'entoure.
+                        La journée, je suis Chargé de clientèle en Banque. J&apos;ai toujours beaucoup aimé le contact humain et ma carrière de commercial a façonné ma façon d&apos;être et d&apos;interagir avec le monde qui m&apos;entoure.
                     </p>
                     <p className='pb-4'>
-                        À côté de ça, j'adore prendre des photos en tant que photographe amateur, boursicoter de temps à autre, faire de l'escalade et jouer à la Xbox !
+                        À côté de ça, j&apos;adore prendre des photos en tant que photographe amateur, boursicoter de temps à autre, faire de l&apos;escalade en salle et jouer à la Xbox !
                     </p>
                     {/* <p className='pt-4 pb-2 text-lg'>
                         Moi c&apos;est Kévin, un <strong>passionné</strong> dans l&apos;âme, qui s&apos;est tourné vers le développement web pour donner vie à ses idées et accompagner ses clients dans leurs plus beaux projets.
