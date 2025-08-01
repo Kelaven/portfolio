@@ -48,10 +48,11 @@ function ContactSection() {
                         <div>
                             <h3 className="uppercase font-bold text-gray-500 tracking-wide">Adresse</h3>
                             <p className="font-light leading-relaxed">
-                                allée du Coteau, <br />
+                                bd Costa de Beauregard,
+                                74600 ANNECY - SEYNOD.
+                                {/* allée du Coteau, <br />
                                 80000 - AMIENS. <br />
-                                {/* <span className='font-normal'>Mobilité nationale</span> */}
-                                Mobilité nationale
+                                Mobilité nationale */}
                             </p>
                         </div>
                     </div>
