@@ -48,7 +48,7 @@ function ContactSection() {
                         <div>
                             <h3 className="uppercase font-bold text-gray-500 tracking-wide">Adresse</h3>
                             <p className="font-light leading-relaxed">
-                                bd Costa de Beauregard,
+                                bd Costa de Beauregard, <br />
                                 74600 ANNECY - SEYNOD.
                                 {/* allée du Coteau, <br />
                                 80000 - AMIENS. <br />
